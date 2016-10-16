@@ -1,3 +1,6 @@
+<!--链接集合-->
+[originhost]: http://docs.orchardproject.net/
+
 > **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors). If you would like to contribute, please see [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
 and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
