@@ -3,6 +3,7 @@
 [000]: http://www.shisujie.com
 [001]: http://docs.orchardproject.net/en/latest/Documentation/Installing-Orchard/
 [002]: http://docs.orchardproject.net/en/latest/Documentation/Working-with-Orchard-in-WebMatrix/
+[009]: http://www.shisujie.com/blog/Working-with-Orchard-in-WebMatrix
 [003]: https://github.com/OrchardCMS/Orchard/releases
 [004]: http://docs.orchardproject.net/en/latest/Documentation/Manually-installing-Orchard-zip-file
 [008]: http://www.shisujie.com/blog/Manually-installing-Orchard-zip-file
@@ -28,7 +29,7 @@
 主要有以下四种方式安装Orchard：
 
 * 利用Microsoft Web Platform Installer（微软Web平台安装程序）进行安装。
-* 利用Microsoft WebMatrix安装；参考：[原文：使用WebMatrix管理Orchard][002]。
+* 利用Microsoft WebMatrix安装；参考：[原文：使用WebMatrix管理Orchard][002]、[译文：Orchard入门 ——使用WebMatrix管理Orchard][009]。
 * 下载Orchard[.zip file][003]安装包手动安装;参考：[原文：利用zip包手动安装][004]、[译文：Orchard入门——手动安装Orchard][008]。
 * 使用Visual Studio直接源码编译安装；参考：[原文：Enlist][005]。
 
