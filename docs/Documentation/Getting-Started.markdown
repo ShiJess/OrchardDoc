@@ -45,7 +45,7 @@ Be aware though that Try Orchard! is really just for testing: since the demo sit
 
 [DotNest](http://dotnest.com/) is the Orchard SaaS provider: this means that you can simply register and create Orchard websites that run in the cloud without any hassle. Your website will just work: you don't have to deploy and later upgrade it, you can just use it.
 
-With DotNest you can try out Orchard very simply, very quickly and since your website is already hosted for you you can also show it to everybody. Apart from getting used to the user interface and features of Orchard you can also get into the [basics of Orchard theme development](http://dotnest.com/knowledge-base/topics/theming) with it and style and customize your Orchard website in a lot of ways.
+With DotNest you can try out Orchard very simply, very quickly and since your website is already hosted for you you can also show it to everybody. Apart from getting used to the user interface and features of Orchard you can also get into the [basics of Orchard theme development](http://dotnest.com/knowledge-base/topics/theming/) with it and style and customize your Orchard website in a lot of ways.
 
 Convenience does come with disadvantages: due to the architecture of DotNest you can't install custom modules, so you have to use what is already available (that however should be enough for a big part of websites).
 
