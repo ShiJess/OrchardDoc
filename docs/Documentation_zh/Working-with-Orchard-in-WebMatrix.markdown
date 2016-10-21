@@ -46,7 +46,7 @@
 
 ![][102]
 
-滚到找到 **Orchard CMS**。输入你想要的网站存储目录名称——如图所示，以 "Orchard CMS" 为例，稍后程序会自动创建"Documents/My Websites/Orchard CMS"目录，点击 **Next**。
+滚动找到 **Orchard CMS**。输入你想要的网站存储目录名称——如图所示，以 "Orchard CMS" 为例，稍后程序会自动创建"Documents/My Websites/Orchard CMS"目录，点击 **Next**。
 
 ![][103]
 
@@ -59,6 +59,7 @@
 ![][105]
 
 接下来，就进入网站设置，具体介绍可以见如下文档：
+
 * [原文链接：Installing Orchard][004]
 * [译文链接：Orchard安装][005]
 

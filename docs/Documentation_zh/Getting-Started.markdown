@@ -9,6 +9,10 @@
 [006]: http://dotnest.com/knowledge-base/topics/theming/
 [007]: http://azure.microsoft.com/en-us/services/websites/
 [008]: http://docs.orchardproject.net/en/latest/Documentation/Managing-Widgets/
+[009]: http://docs.orchardproject.net/en/latest/Documentation/Previewing-and-applying-a-theme/
+[010]: http://docs.orchardproject.net/en/latest/Documentation/Installing-themes/
+[011]: http://docs.orchardproject.net/en/latest/Documentation/Installing-and-upgrading-modules/
+[012]: http://docs.orchardproject.net/en/latest/Documentation/Module-gallery-feeds/
 
 
 <!--图片链接集合-->
@@ -35,6 +39,30 @@
 [121]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/homepage_modified_thirdleaderaside_675.png
 [122]: http://docs.orchardproject.net/en/latest/Upload/getting-started/9.png
 [123]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/home_page_675.png
+[124]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/edit_widget_media_1_675.png
+[125]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/MedLibCreateFolder.png
+[126]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/MedLibSaveFolderName.png
+[127]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/MedLibImport.png
+[128]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/MedLibUpload.png
+[129]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/MedLibClose.png
+[130]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/MedLibSelectImage.png
+[131]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/MedLibSaveContent.png
+[132]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/FirstLeaderAside.png
+[133]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/edit_body_675.png
+[134]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/edit_homepage_675.png
+[135]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/PagePublishNow.png
+[136]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/create_new_page_0_1_675.png
+[137]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/CreateNewPage.png
+[138]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/AddNewLayer.png
+[139]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/create_new_page_2_2_675.png
+[140]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/AddNewWidget.png
+[141]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/AddHtmlWidget.png
+[142]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/EditHtmlWidget.png
+[143]: http://docs.orchardproject.net/en/latest/Attachments/Getting-Started/CustomLayoutResult.png
+[144]: http://docs.orchardproject.net/en/latest/Upload/getting-started/10.png
+[145]: http://docs.orchardproject.net/en/latest/Upload/getting-started/11.png
+[146]: http://docs.orchardproject.net/en/latest/Upload/getting-started/12.png
+[147]: http://docs.orchardproject.net/en/latest/Upload/getting-started/13.png
 
 
 > 原文链接：[Building Your First Orchard Site][001]
@@ -197,151 +225,147 @@ Orchard提供了一个简化页面区域或页面主体编辑的功能。要打�
 **5)** 修改标题、主体内容等。 
 
 <!--原文为三级标题，实则是接着上面的扩展，故需改四级-->
-#### Inserting a Media Item 
+#### 插入媒体文件内容 
 
-**6)** Select **Insert Media Item**. 
+**6)** 点击 **Insert Media** 按钮 
 
-![](../Upload/screenshots_675/edit_widget_media_1_675.png)
+![][124]
 
-**7)** Click **Create Folder**. 
+**7)** 点击 **Create Folder**. 
 
-![](../Attachments/Getting-Started/MedLibCreateFolder.png)
+![][125]
 
-**8)** Name the folder *myImages* and click **Save**. 
+**8)** 输入文件夹名称 *myImages* 并点击 **Save**. 
 
-![](../Attachments/Getting-Started/MedLibSaveFolderName.png)
+![][126]
 
-**9)** Click the folder *myImages*, and then click **Import** 
+**9)** 选中文件夹 *myImages*, 然后点击 **Import** 
 
-![](../Attachments/Getting-Started/MedLibImport.png)
+![][127]
 
-**10)** Click *My Computer* and then click in the central zone to browse for an image. If you prefer you can drop your image into the central zone.
+**10)** 点击选择 *My Computer* ，然后点击中间区域浏览选择本地图片上传。当然，你也可以拖动图片到中间区域自动上传。
 
-![](../Attachments/Getting-Started/MedLibUpload.png)
+![][128]
 
+**11)** 关闭对话框.
 
-**11)** Close the dialog.
+![][129]
 
-![](../Attachments/Getting-Started/MedLibClose.png)
+**12)** 点击选中图片后点击 **Select**.
 
+![][130]
 
-**12)** Click the image and click **Select**.
+**13)** 如果需要，可以通过右侧的处理程序调整图片大小，比便于更好的显示在内容区域中。然后点击 **Save** 应用部件的更改。 
 
-![](../Attachments/Getting-Started/MedLibSelectImage.png)
+![][131]
 
-**13)** If needed, resize the image using the handlers so that later it fits nicely into the zone. Then click **Save** to save the changes to the widget. 
+首页将自动更新改变区域。
 
-![](../Attachments/Getting-Started/MedLibSaveContent.png)
+![][132]
 
-The home page is automatically displayed with the updated zone.
+**14)** 点击页面 **Body** 部分的 **Edit** 链接
 
-![](../Attachments/Getting-Started/FirstLeaderAside.png)
+![][133]
 
-**14)** Select the **Edit** link for the **Body** of the page.
+ Orchard将展示 **Edit Page** 
+ > **Note:** 修改页面同样可以在控制面板中打开（选择 **Content** 后，点击要修改页面后的 **Edit** 链接）。
 
-![](../Upload/screenshots_675/edit_body_675.png)
+ **15)** 输入内容 
 
- Orchard will display the **Edit Page** screen.
- > **Note:** The Edit Page screen can also be reached from the Dashboard by selecting **Content** on the Dashboard and then selecting **Edit** for the page you are interested in.
+![][134]
 
- **15)** Enter some text for the content. 
+**16)** 点击页面底部的 **Publish Now** ，页面内容将立即更新
 
-![](../Upload/screenshots_675/edit_homepage_675.png)
-
-**16)** Select **Publish Now** at the bottom of the page to make the updates to the page visible immediately.
-
-![](../Attachments/Getting-Started/PagePublishNow.png)
+![][135]
 
 
-### Adding a New Page to Your Site
+### 添加新页面
 
-**1)** In the Orchard Dashboard, under **New**, select **Page**.
+**1)** 在Orchard的控制面板中，点击在 **New** 下面的 **Page**.
 
-**2)** Enter a title for the page.  When you enter a title for the page and save it (for example, "Download"), the permalink (URL) for the page will be filled in automatically ("download").  You can edit this link if you prefer a different URL.
+**2)** 输入页面标题。输入完标题后，页面链接会自动填写——如：页面标题为 "Download", 页面链接将自动设为 "download"。当然，你也可以修改为你想要的链接。
 
-**3)** Enter some text for the content page body.
+**3)** 输入页面主体内容。
 
-![](../Upload/screenshots_675/create_new_page_0_1_675.png)
+![][136]
 
+**4)** 在 **Tags** 字段部分，输入 "download" 和 "Orchard" 并以逗号分割，这样后面你就可以通过标签来搜索筛选页面了。 
 
-**4)**  In the **Tags** field, add comma-separated tags such as "download" and "Orchard" so that you can search and filter using those tags later. 
+**5)** 勾选 **Show on main menu** 并输入菜单文本 ("Downloads") 以便通过主菜单链接到此页面
 
-**5)** Check **Show on main menu** and enter the menu text ("Downloads") to use in the site's main menu.
+**6)** 点击 **Publish Now** ，立即更新页面显示。你也可以将页面保存为草稿（方便后面在发布前修改），或者选择在特定的时间发布。
 
-**6)** Select **Publish Now** to make the updates to the page visible immediately. You can also save the page as a draft (to edit later before publishing), or you can choose to publish the page at a specific date and time.
+![][137]
 
-![](../Attachments/Getting-Started/CreateNewPage.png)
-
-**7)** Select **Your Site** in the upper-left side of the Dashboard to view the modified home page with the new menu. Clik **Downloads** and you will see your new page.
+**7)** 点击控制面板左上角的**网站标题**，跳转至主页面查看新菜单。点击 **Downloads** 菜单，将跳转到你的新页面
  
-### Adding New Layer for a Page
+### 给页面添加新层
 
-To change the layout of your new page without affecting the rest of the site you can create a new layer, that will be applied only to the *Downloads* page. Then you can place some widgets on that layer and they will be visible only in the *Downloads* page.
+为了改变新页面的布局，但又不能影响到其他页面，你就需要添加一个新层。下面将新层应用到 *Downloads* 页面，这样你可以为 *Downloads* 页面添加一些独有的部件。.
  
+**1)** 打开控制面板，选择 **Widgets**。然后点击 **add a new layer** 来添加一个新层。稍后，你将可以自定义布局内容。
 
-**1)** Go to the Dashboard and select **Widgets**. Then click **add a new layer** to add a new layer for this page which will allow you to customize the layout for the new page at a later point in time.
+![][138]
 
-![](../Attachments/Getting-Started/AddNewLayer.png)
+**2)** 输入层的名称、描述以及层的规则: url"~/download"。层规则用于告诉 Orchard 网站系统当前层的部件仅仅显示在url指向 "download"的页面。然后点击 **Save**.
 
-**2)** Write a name for the layer, a description, and a layer rule: url"~/download". This will instruct the Orchard System to show the widgets in this layer only when the url of the browser is pointing to "download". Select **Save**.
+![][139]
 
-![](../Upload/screenshots_675/create_new_page_2_2_675.png)
+#### 添加 HTML 部件
 
+**3)** 确认层规则可用，并可以添加部件到层。同时确认 **Current Layer** 是 **Download**。点击*AsideFirst*后的**Add** 
 
-### Adding a New HTML Widget
+![][140]
 
-**3)** To check that your layer rule is working you can add a widget to it. Ensure that **Current Layer** is **Download**. Click **Add** in *AsideFirst*.
+**4)** 选择添加 **Html Widget**.
 
-![](../Attachments/Getting-Started/AddNewWidget.png)
+![][141]
 
-**4)** Add a new **Html Widget**.
+**5)** 输入标题及内容并保存。
 
-![](../Attachments/Getting-Started/AddHtmlWidget.png)
+![][142]
 
-**5)** Write a title and a body for it. Save it.
+**6)** 点击控制面板左上角的 **网站名称** ，进入主页。然后打开*Downloads*页面，你将看到自定义的布局
 
-![](../Attachments/Getting-Started/EditHtmlWidget.png)
-
-**6)** Select **Your Site** in the upper-left side of the Dashboard. Navigate to *Downloads*. You should see the custom layout.
-
-![](../Attachments/Getting-Started/CustomLayoutResult.png)
+![][143]
 
 
+### 改变主题
 
-### Selecting A Theme
+你可以通过改变主题来定制Orchard网站的外观 
 
-To customize the look and feel of the Orchard website you change the theme. 
+**1)** 在控制面板中，选择 **Themes** —— 默认列出已经安装的主题。 
 
-**1)** On the Orchard Dashboard, select **Themes**.  The currently installed themes are listed. 
+**2)** 要下载新的主题，点击 **Gallery** 标签。
 
-**2)** To download new themes, select the **Gallery** tab.
+**3)** 搜索 **PJS.Bootstrap** ，找到 PJS.Bootstrap 主题并安装。
 
-**3)** Search for **PJS.Bootstrap** to find the PJS.Bootstrap Theme. Install the **PJS.Bootstrap** theme.
+**4)** 点击 **Installed** 标签。 
 
-**4)** Select the **Installed** tab. 
+一旦主题安装完，它将显示在**Installed** 标签的 **Available** 部分。在后面的插图里，**PJS.Bootstrap** 主题已经安装，所以它显示在 **Available** 部分。 
 
-After a theme has been installed it appears as an option in the **Available** section on the **Installed** tab. In the following illustration, the **PJS.Bootstrap** theme has been installed so it appears in the **Available** section. (The current theme for the site is **PJS.Bootstrap**.) 
+**5)** 要查看网站应用主题的样式，可以点击**Preview**查看应用主题的效果。确定应用主题，则点击 **Set Current** 将主题应用到网站。更多详细内容见：[原文：Previewing and Applying a Theme][009] 和 [原文：Installing Themes][010]
 
-**5)** To see how your site will look with an available them,  select **Preview** for the theme.  To apply an available theme to your site select **Set Current** for the theme. For more details, see [Previewing and Applying a Theme](Previewing-and-applying-a-theme) and [Installing Themes](Installing-themes).
+![][144]
 
-![](../Upload/getting-started/10.png)
-
-![](../Upload/getting-started/11.png)
+![][145]
 
 
-### Extending Orchard With Modules And Features
+### Orchard扩展功能模块
 
-A key feature of Orchard is the ability to add new features in order to extend the functionality of your site. The primary way to do this is by installing modules. You can think of a module as a package of files (in a .zip folder) that can be installed on your site. To view the modules that are included with Orchard, in the Orchard Dashboard, click **Modules** and then click the **Installed** tab in the **Modules** screen.
+Orchard的一个主要特点是可以新功能来扩展你的网站。它通过安装模块来实现此功能。你可以用一个zip压缩包来安装模块。要查看已安装的模块，可以在控制面板中点击 **Modules**,然后点击**Modules** 界面的**Installed**标签
 
-![](../Upload/getting-started/12.png)
+![][146]
 
-Orchard provides some built-in modules, and you can install new modules. For details, see [Installing and Upgrading Modules](Installing-and-upgrading-modules) and [Registering additional gallery feeds](Module-gallery-feeds).
+Orchard提供了一些内置的模块，你也可以安装新模块。更多信息见：[原文：Installing and Upgrading Modules][011] 和 [原文：Registering additional gallery feeds][012].
 
-Individual modules can expose features that can be independently enabled or disabled. To view the features exposed by the built-in modules in Orchard, click the **Features** tab in the **Modules** screen.  
+模块功能可以单独的启用或禁用。要查看Orchard的内置功能模块，请点击**Modules**界面的**Features**标签.  
 
-![](../Upload/getting-started/13.png)
+![][147]
 
-Each feature has an **Enable** or **Disable** link (depending on its current state), as well as an optional list of dependencies that must also be enabled for a specific feature. The documentation throughout this site describes the variety of features in Orchard and how you can use them to customize your site's user interface and behavior.
+每一个功能都有 **Enable** 或 **Disable** 链接（取决于当前启用禁用状态），同时要启用某些功能模块，其依赖项也必须启用。
+
+以上就是本文的全部内容，主要介绍了Orchard的各种功能，以及如何利用这些功能定制你网站的界面和处理行为。
 
 
 译：[奇葩史][000]
