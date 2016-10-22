@@ -19,6 +19,8 @@
 [016]: http://docs.orchardproject.net/en/latest/Documentation/Previewing-and-Applying-a-Theme/
 [017]: http://docs.orchardproject.net/en/latest/Documentation/Managing-Users-and-Roles/
 [018]: http://docs.orchardproject.net/en/latest/Documentation/Modifying-Site-Settings/
+[019]: http://www.shisujie.com/blog/Navigation-and-menus
+
 
 <!--图片链接集合-->
 [101]: http://docs.orchardproject.net/en/latest/Attachments/Getting-around-the-dashboard/Dashboard.png
@@ -51,7 +53,7 @@ Orchard控制面板用于管理网站、改变外观、添加内容以及控制O
 分类方法 *Taxonomies*      | 用于管理分类信息。添加后，可以给网站内容进行分类，以此进行分类显示。
 部件 *Widgets*             | 用于管理网站界面显示部件。详见：[原文：Managing widgets][008]。
 媒体 *Media*               | 用于管理媒体文件夹。详见：[原文：Adding and Managing Media Content][009]。
-导航 *Navigation*          | 用于管理主菜单以及自定义添加的菜单。详见：[原文：Navigation and Menus][010]。
+导航 *Navigation*          | 用于管理主菜单以及自定义添加的菜单。详见：[原文：Navigation and Menus][010]、[译文：Orchard入门——导航与菜单][019]。
 标签 *Tags*                | 用于管理网站内容标签。详见：[原文：Organizing Content with Tags][011]。
 模块 *Modules*             | 用于管理网站功能模块——下载、安装、管理。详见：<br />[原文：Installing Modules and Themes from the Gallery][012]; <br />[原文：Enabling and Disabling Features][013]; <br />[原文：Installing and Upgrading Modules][014]。
 主题 *Themes*              | 用于管理网站主题——下载、应用。详见：<br />[原文：Installing Themes][015]; <br />[原文：Previewing and Applying a Theme][016].
