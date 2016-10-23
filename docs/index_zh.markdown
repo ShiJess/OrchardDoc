@@ -1,17 +1,24 @@
 <!--链接集合-->
 [originhost]: http://docs.orchardproject.net/
+[001]: http://www.shisujie.com/blog/Installing-Orchard
+[002]: http://www.shisujie.com/blog/Manually-installing-Orchard-zip-file
+[003]: http://www.shisujie.com/blog/Working-with-Orchard-in-WebMatrix
+[004]: http://www.shisujie.com/blog/Getting-around-the-dashboard
+[005]: http://www.shisujie.com/blog/Getting-Started
+[006]: http://www.shisujie.com/blog/Navigation-and-menus
+[007]: http://www.shisujie.com/blog/Adding-a-Blog-to-Your-Site
 
 > **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors). If you would like to contribute, please see [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
 and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
-## Getting Started ##
-* [Installing Orchard](Documentation/Installing-Orchard)
-* [Manually Installing Orchard Using a .zip File](Documentation/Manually-installing-Orchard-zip-file)
-* [Working with Orchard in WebMatrix](Documentation/Working-with-Orchard-in-WebMatrix)
-* [Getting Around the Dashboard](Documentation/Getting-around-the-dashboard)
-* [Building Your First Orchard Site](Documentation/Getting-Started)
-* [Navigation and Menus](Documentation/Navigation-and-menus)
-* [Adding a Blog to Your Site](Documentation/Adding-a-Blog-to-Your-Site)
+## 入门 ##
+* [安装Orchard——*Installing Orchard*][001] ——缺译文链接
+* [通过zip包手动安装Orchard——*Manually Installing Orchard Using a .zip File*][002]——链接已完整
+* [使用WebMatrix管理Orchard网站——*Working with Orchard in WebMatrix*][003]——缺译文链接
+* [Orchard控制面板概览——*Getting Around the Dashboard*][004]——缺译文链接
+* [构建你的第一个Orchard网站——*Building Your First Orchard Site*][005]——缺译文链接
+* [导航与菜单——*Navigation and Menus*][006]——链接已完整
+* [给网站添加新博客——*Adding a Blog to Your Site*][007]——缺译文链接
 * [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)
 * [Managing Widgets](Documentation/Managing-widgets)
 * [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
