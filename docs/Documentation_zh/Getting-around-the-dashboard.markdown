@@ -21,6 +21,7 @@
 [018]: http://docs.orchardproject.net/en/latest/Documentation/Modifying-Site-Settings/
 [019]: http://www.shisujie.com/blog/Navigation-and-menus
 [020]: http://www.shisujie.com/blog/Adding-a-Blog-to-Your-Site
+[021]: http://www.shisujie.com/blog/Adding-pages-to-your-site
 
 
 <!--图片链接集合-->
@@ -46,7 +47,7 @@ Orchard控制面板用于管理网站、改变外观、添加内容以及控制O
 -------------       | -----------
 控制面板 *Dashboard*       | 包含控制面板以及显示 ("Welcome to Orchard") 页面。此页面内容主要有：<br /> 1. 关于Orchard的帮助链接；<br /> 2. 网站所运行的Orchard版本。<br /> 3. [Orchard][002]提供的相关公告，如Orchard有新版本、相关应用有更新等。
 新建 *New*                 | 用于创建在 **Content Definition** 中定义的默认内容类型或自定义的内容类型的新实例。更多内容，详见：[原文：Creating Custom Content Types][003]。
-内容 *Content*             | 用于管理已创建的内容实例。如：你可以这里管理你的页面——创建、修改或者删除，以及发布。更多详细内容见：[原文：Adding Pages to Your Site][004]。
+内容 *Content*             | 用于管理已创建的内容实例。如：你可以这里管理你的页面——创建、修改或者删除，以及发布。更多详细内容见：[原文：Adding Pages to Your Site][004]、[译文：Orchard入门——给网站添加页面][021]。
 内容定义 *Content Definition*  | 用于管理已有的内容类型或者添加自定义的内容类型。详情见：[原文：Content Types][005]。
 博客 *Blog*                | 用于添加新的博客到网站，或者添加一篇博文到博客，以及管理你的博客。*注：Orchard支持多博客，此处可以添加多个博客*。更多内容见：[原文：Adding a Blog to Your Site][006]、[译文：Orchard入门——给网站添加新博客][020]。
 筛选 *Queries*             | 用于管理筛选器——新增修改删除。筛选器用于后期网站内容列表显示。*注：默认可能不显示，在**Modules**中启用Forms下的Query Element功能即可显示*。
