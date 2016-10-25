@@ -8,6 +8,7 @@
 [006]: http://www.shisujie.com/blog/Navigation-and-menus
 [007]: http://www.shisujie.com/blog/Adding-a-Blog-to-Your-Site
 [008]: http://www.shisujie.com/blog/Adding-Pages-to-Your-Site
+[009]: http://www.shisujie.com/blog/Adding-and-managing-media-content
 
 > **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors). If you would like to contribute, please see [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
 and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
@@ -21,7 +22,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 * [导航与菜单——*Navigation and Menus*][006]——链接已完整
 * [给网站添加新博客——*Adding a Blog to Your Site*][007]——缺译文链接
 * [给网站添加页面——*Adding Pages to Your Site*][008]——链接已完整
-* [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)
+* [媒体文件的添加与管理——*Adding and Managing Media Content*][009]——链接已完整
 * [Managing Widgets](Documentation/Managing-widgets)
 * [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
 

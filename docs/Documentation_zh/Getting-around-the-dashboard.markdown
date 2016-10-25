@@ -22,6 +22,7 @@
 [019]: http://www.shisujie.com/blog/Navigation-and-menus
 [020]: http://www.shisujie.com/blog/Adding-a-Blog-to-Your-Site
 [021]: http://www.shisujie.com/blog/Adding-pages-to-your-site
+[022]: http://www.shisujie.com/blog/Adding-and-managing-media-content
 
 
 <!--图片链接集合-->
@@ -54,7 +55,7 @@ Orchard控制面板用于管理网站、改变外观、添加内容以及控制O
 评论 *Comments*            | 在网站允许用户评论的情况下，用于管理用户评论。更多信息见：[原文：Moderating Comments][007]。
 分类方法 *Taxonomies*      | 用于管理分类信息。添加后，可以给网站内容进行分类，以此进行分类显示。
 部件 *Widgets*             | 用于管理网站界面显示部件。详见：[原文：Managing widgets][008]。
-媒体 *Media*               | 用于管理媒体文件夹。详见：[原文：Adding and Managing Media Content][009]。
+媒体 *Media*               | 用于管理媒体文件夹。详见：[原文：Adding and Managing Media Content][009]、[译文：Orchard入门——媒体文件的添加与管理][022]。
 导航 *Navigation*          | 用于管理主菜单以及自定义添加的菜单。详见：[原文：Navigation and Menus][010]、[译文：Orchard入门——导航与菜单][019]。
 标签 *Tags*                | 用于管理网站内容标签。详见：[原文：Organizing Content with Tags][011]。
 模块 *Modules*             | 用于管理网站功能模块——下载、安装、管理。详见：<br />[原文：Installing Modules and Themes from the Gallery][012]; <br />[原文：Enabling and Disabling Features][013]; <br />[原文：Installing and Upgrading Modules][014]。
@@ -64,5 +65,5 @@ Orchard控制面板用于管理网站、改变外观、添加内容以及控制O
 报告 *Reports*             | 用于管理及查看Orchard生成的网站报告。*注：默认可能会不显示，在**Modules**中启用Core下的Report功能即可显示*
 设置 *Settings*            | 用于配置各种站点设置，包括：网站名称、时区、每页项目数、Gallery地址、用户评论是否必须批准、允许上传的媒体类型以及用户注册设置等等。更多信息见：[原文：Modifying Site Settings][018]。
 
-
+***
 译：[奇葩史][000]
