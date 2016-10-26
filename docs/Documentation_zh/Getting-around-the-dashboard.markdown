@@ -23,6 +23,7 @@
 [020]: http://www.shisujie.com/blog/Adding-a-Blog-to-Your-Site
 [021]: http://www.shisujie.com/blog/Adding-pages-to-your-site
 [022]: http://www.shisujie.com/blog/Adding-and-managing-media-content
+[023]: http://www.shisujie.com/blog/Managing-widgets
 
 
 <!--图片链接集合-->
@@ -54,7 +55,7 @@ Orchard控制面板用于管理网站、改变外观、添加内容以及控制O
 筛选 *Queries*             | 用于管理筛选器——新增修改删除。筛选器用于后期网站内容列表显示。*注：默认可能不显示，在**Modules**中启用Forms下的Query Element功能即可显示*。
 评论 *Comments*            | 在网站允许用户评论的情况下，用于管理用户评论。更多信息见：[原文：Moderating Comments][007]。
 分类方法 *Taxonomies*      | 用于管理分类信息。添加后，可以给网站内容进行分类，以此进行分类显示。
-部件 *Widgets*             | 用于管理网站界面显示部件。详见：[原文：Managing widgets][008]。
+部件 *Widgets*             | 用于管理网站界面显示部件。详见：[原文：Managing widgets][008]、[译文：Orchard入门——部件管理][023]。
 媒体 *Media*               | 用于管理媒体文件夹。详见：[原文：Adding and Managing Media Content][009]、[译文：Orchard入门——媒体文件的添加与管理][022]。
 导航 *Navigation*          | 用于管理主菜单以及自定义添加的菜单。详见：[原文：Navigation and Menus][010]、[译文：Orchard入门——导航与菜单][019]。
 标签 *Tags*                | 用于管理网站内容标签。详见：[原文：Organizing Content with Tags][011]。
