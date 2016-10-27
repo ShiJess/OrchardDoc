@@ -10,6 +10,7 @@
 [008]: http://www.shisujie.com/blog/Adding-Pages-to-Your-Site
 [009]: http://www.shisujie.com/blog/Adding-and-managing-media-content
 [010]: http://www.shisujie.com/blog/Managing-widgets
+[011]: http://www.shisujie.com/blog/Organizing-content-with-tags
 
 > **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors). If you would like to contribute, please see [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
 and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
@@ -25,7 +26,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 * [给网站添加页面——*Adding Pages to Your Site*][008]——链接已完整
 * [媒体文件的添加与管理——*Adding and Managing Media Content*][009]——链接已完整
 * [部件管理——*Managing Widgets*][010]——缺译文链接
-* [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
+* [使用标签管理内容——*Organizing Content Using Tags*][011]——链接已完整
 
 ## About the Project ##
 * [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
