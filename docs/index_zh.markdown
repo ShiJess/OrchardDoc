@@ -1,5 +1,6 @@
 <!--链接集合-->
 [originhost]: http://docs.orchardproject.net/
+[000]: http://www.shisujie.com
 [001]: http://www.shisujie.com/blog/Installing-Orchard
 [002]: http://www.shisujie.com/blog/Manually-installing-Orchard-zip-file
 [003]: http://www.shisujie.com/blog/Working-with-Orchard-in-WebMatrix
@@ -11,37 +12,41 @@
 [009]: http://www.shisujie.com/blog/Adding-and-managing-media-content
 [010]: http://www.shisujie.com/blog/Managing-widgets
 [011]: http://www.shisujie.com/blog/Organizing-content-with-tags
+[012]: http://www.shisujie.com/blog/Blogging-with-LiveWriter
 
-> **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors). If you would like to contribute, please see [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
-and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 ## 入门 ##
-* [安装Orchard——*Installing Orchard*][001] ——缺译文链接
-* [通过zip包手动安装Orchard——*Manually Installing Orchard Using a .zip File*][002]——链接已完整
-* [使用WebMatrix管理Orchard网站——*Working with Orchard in WebMatrix*][003]——缺译文链接
-* [Orchard控制面板概览——*Getting Around the Dashboard*][004]——缺译文链接
-* [构建你的第一个Orchard网站——*Building Your First Orchard Site*][005]——缺译文链接
-* [导航与菜单——*Navigation and Menus*][006]——链接已完整
-* [给网站添加新博客——*Adding a Blog to Your Site*][007]——缺译文链接
-* [给网站添加页面——*Adding Pages to Your Site*][008]——链接已完整
-* [媒体文件的添加与管理——*Adding and Managing Media Content*][009]——链接已完整
-* [部件管理——*Managing Widgets*][010]——缺译文链接
-* [使用标签管理内容——*Organizing Content Using Tags*][011]——链接已完整
+* [安装Orchard——*Installing Orchard*][001] 
+* [通过zip包手动安装Orchard——*Manually Installing Orchard Using a .zip File*][002]
+* [使用WebMatrix管理Orchard网站——*Working with Orchard in WebMatrix*][003]
+* [Orchard控制面板概览——*Getting Around the Dashboard*][004]
+* [构建你的第一个Orchard网站——*Building Your First Orchard Site*][005]
+* [导航与菜单——*Navigation and Menus*][006]
+* [给网站添加新博客——*Adding a Blog to Your Site*][007]
+* [给网站添加页面——*Adding Pages to Your Site*][008]
+* [媒体文件的添加与管理——*Adding and Managing Media Content*][009]
+* [部件管理——*Managing Widgets*][010]
+* [使用标签管理内容——*Organizing Content Using Tags*][011]
 
+<!-- 暂不翻译
 ## About the Project ##
 * [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
 * [A Guide to All the Built-in Modules and Features of Orchard](Documentation/Builtin-Features)
 * [What's Happening Now?](Documentation/Feature-roadmap)
 * [Frequently Asked Questions](Documentation/Frequently-asked-questions)
+-->
 
-## Tutorial Videos ##
+## 视频教程 ##
 
-* [Tutorial Videos About Orchard](Documentation/Orchard-TV)
+> 要求：能听懂英文-外国人做的视频、能看墙外的-视频在Youtube上
 
-## Documentation ##
+* [Orchard视频教程（英文）——*Tutorial Videos About Orchard*](http://docs.orchardproject.net/en/latest/Documentation/Orchard-TV/)
 
-* **Authoring Websites**
-    * [Blogging with LiveWriter](Documentation/Blogging-with-LiveWriter)
+## 资料 ##
+
+<!--以下为网站使用管理相关内容-->
+* **网站内容管理——*Authoring Websites***
+    * [使用Live Writer写博客——*Blogging with LiveWriter*][012]
     * [Creating Global-Ready Applications](Documentation/Creating-global-ready-applications)
     * [Search and Indexing](Documentation/Search-and-indexing)
     * [Saving, Scheduling, and Publishing Drafts](Documentation/Saving-scheduling-and-publishing-drafts)
@@ -76,7 +81,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Projection](Documentation/Projection)
     * [Create Dynamic Forms](Documentation/Creating-Dynamic-Forms "Use Dynamic Forms to create subscribe and contact us pages in Orchard")
 
-
+<!-- 以下为部署相关内容-->
 * **Hosting and Deploying Websites**
     * [Upgrading a Site to a New Version of Orchard](Documentation/Upgrading-a-site-to-a-new-version-of-Orchard)
     * [Optimizing Server Performance of Orchard Applications](Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting)
@@ -88,7 +93,8 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Setting Up a Multi-Tenant Orchard Site](Documentation/Setting-up-a-multi-tenant-Orchard-site)
     * [Setting Up a Machine Key](Documentation/Setting-up-a-machine-key)
 
-
+<!--以下为网站开发相关内容-->
+<!--模块开发-->
 * **Extending Orchard**
     * [First Steps into Orchard](Documentation/First-steps-into-Orchard)
     * [How Orchard Works](Documentation/How-Orchard-works)
@@ -116,6 +122,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Understanding Content Handlers](Documentation/Understanding-content-handlers)
 <!-- ** [Understanding Content Drivers](Documentation/Understanding-content-drivers) (TBD) -->
 
+<!--主题开发相关-->
 * **Creating Themes**
     * [Writing a New Theme](Documentation/Writing-a-new-theme)
     * [The Anatomy of a Theme](Documentation/Anatomy-of-a-theme)
@@ -127,7 +134,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [UI Guidelines for Theme Authors](Documentation/UI-guidelines-for-theme-authors)
     * [Customizing Orchard Using Designer Helper Tools](Documentation/Customizing-Orchard-using-Designer-Helper-Tools)
 
-
+<!--网站开发，针对要参与Orchard项目的开发-->
 * **Developer Tools and Guidelines**
     * [Developer FAQ](Documentation/Developer-FAQ)
     * [Setting Up a Source Enlistment](Documentation/Setting-up-a-source-enlistment)
@@ -141,7 +148,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Orchard Dynamic Compilation](Documentation/Orchard-module-loader-and-dynamic-compilation)
     * [Configuring Email](Documentation/Configuring-email)
 
-
+<!--关于贡献文档内容相关介绍-->
 * **Getting Involved**
     * [Contributing Documentation](Documentation/Contributing-documentation)
     * [Documentation Style Guidelines](Documentation/Documentation-Style-Guidelines)
@@ -153,3 +160,6 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 ## Archived Specs ##
 
 * [Archived Specs](Documentation/Archived-specs)
+
+***
+掘客：[奇葩史][000]
