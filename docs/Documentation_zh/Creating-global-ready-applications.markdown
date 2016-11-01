@@ -2,12 +2,15 @@
 <!--URL域 http://docs.orchardproject.net/en/latest -->
 [000]: http://www.shisujie.com
 [001]: http://docs.orchardproject.net/en/latest/Documentation/Creating-global-ready-applications/
-[002]: https://crowdin.net/
+[002]: https://crowdin.com/
 [003]: https://crowdin.net/project/orchard-cms
 [004]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Vandelay.Industries
 [005]: http://orchardproject.net/localization
 [006]: https://crowdin.net/download/project/orchard-cms.zip
 [007]: https://crowdin.net/download/project/orchard-cms-gallery.zip
+[008]: https://crowdin.com/project/orchard-cms-gallery
+[009]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Vandelay.Industries
+[010]: http://docs.orchardproject.net/en/latest/Documentation/Creating-custom-content-types/
 
 <!--图片链接集合-->
 [101]: http://docs.orchardproject.net/en/latest/Upload/screenshots/add_cultures_settings.png
@@ -15,6 +18,12 @@
 [103]: http://docs.orchardproject.net/en/latest/Upload/screenshots/Culture_newdefault.png
 [104]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/default_site_culture_fr_675.png
 [105]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/fr_po_file.png
+[106]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/Localize_enable_675.png
+[107]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/new_translation_675.png
+[108]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/Localize_content_675.png
+[109]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/Localize_en_downloadpg_675.png
+[110]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/Localize_fr_downloadpg_675.png
+[111]: http://docs.orchardproject.net/en/latest/Upload/screenshots/add_localization_part_MyEvent.png
 
 
 > 原文链接：[Creating Global-Ready Applications][001]  
@@ -124,88 +133,85 @@ ID,通常是原始（未翻译的）字符串。一旦ID值设置好后，就算
 
 ![][105]
 
-### How to contribute
+### 怎样提供贡献
 
-- Register on [Crowdin](https://crowdin.com/).
-- Go to the project page of [Orchard CMS](https://crowdin.net/project/orchard-cms) and [Orchard CMS Gallery](https://crowdin.net/download/project/orchard-cms-gallery.zip) and apply to join the project.
-- Your application will be accepted shortly and you'll be added to the project as "Proofreader" for the selected languages. This means that you'll be able to edit and approve translations (which is necessary for the translated strings to be included in the downloadable packages).
-- If you are new to the Orchard translations, please consult with other translators of the same language and make sure you follow the same conventions.
-
-
-#### Resource String Reference
-
-The reference for a resource string in a _.po_ file (the `reference-string` value described in the previous section) is optional. If no reference is specified, the resource string will be used as a fallback whenever a resource with the same ID is queried with a reference that can't be found. This is a useful way to create generic resource strings that are used in multiple places in the application and are not context-sensitive. You can always override a generic fallback like this as needed.
-
-The reference strings can be stored in different locations, depending on how the string is used in the application:
-
-* **Strings from views**:  Use the virtual path of the view from the root of the application (for example, _~/Themes/TheThemeMachine/Views/User.cshtml_).
-* **Strings from _.cs_ files**:  Use the fully qualified type name of the class where the string is being used (for example, `Orchard.Packaging.AdminMenu`).
-* **Strings from module manifests or theme manifests**:  Use the virtual path of the manifest from the root of the application (for example, _~Themes/TheThemeMachine/Theme.txt_). Note that module and theme manifest localization uses a path for fields as the key. For example, the Author field uses the key "Author" and the Description field of the Gallery feature would be under the key "Gallery Description".
+- 在 [Crowdin][002] 网站上注册账户。
+- 去 [Orchard CMS][003] 与 [Orchard CMS Gallery][008] 项目页申请加入项目。
+- 你的申请很快就会批准，然后你将以你所选语言的“校对员”身份被添加到对应项目。这意味着你可以编辑和校对翻译内容（这是将翻译好的字符串添加到下载包里所必需的操作）。
+- 如果你是Orchard项目新加入的成员，请与其他同语言的翻译者联系，确保你们遵循的是同一个规则。
 
 
-### Contributing files for third party modules
+#### 资源字符串引用
 
-Our localization infrastructure is built to host translations for third party modules. If you are the author of a module or want to contribute translations for a module, you can generate po files for it using the [Translation Manager](http://gallery.orchardproject.net/List/Modules/Orchard.Module.Vandelay.Industries) module.
+在 _.po_ 文件中资源引用字符串是可选的 —— (`reference-string`的信息在上面已经描述过)。如果没有定义引用，它将作为所有具有相同ID资源的备用 —— 如果一个具有相同ID的资源没有找到引用，那么它就取此资源的值。这在创建通用资源字符串（即字符串在多个地方使用且字符串是上下文无关的）时会很有用。这样你可以在需要的时候，随时覆盖通用的备用资源。
 
-From an Orchard command line, type the following command (for the example of the Bing.Maps module):
+引用字符串可以存储在不同的地方，这取决于如何在应用中使用这个字符串：—— *？个人没怎么搞懂 - 待进一步研究？*
 
+* **Strings from views**: 使用视图的虚拟路径——从应用的根目录开始（如：_~/Themes/TheThemeMachine/Views/User.cshtml_）。
+* **Strings from _.cs_ files**: 使用完整的（含有命名空间）类名来找到对应的字符串（例如：`Orchard.Packaging.AdminMenu`）。
+* **Strings from module manifests or theme manifests**: 使用清单文件的虚拟路径——从应用的根目录开始（如：_~Themes/TheThemeMachine/Theme.txt_）。 注意：模块和主题的清单本地化使用路径作为字段的键。例如，Author字段使用键“”“Author”，Gallery功能的Description字段可能使用键值“Gallery Description”。
+
+
+### 为第三方模块提供贡献
+
+我们的本地化基础建设是提供托管第三方应用翻译的。如果你是一个模块的作者（开发者）或者你想为一个模块贡献翻译内容，你可以使用 [Translation Manager][009] 模块来生成po格式文件。
+
+在Orchard的命令行工具中输入以下命令（以Bing.Maps模块为例）：
     
     extract default translation /Extensions:Bing.Maps /Output:\temp
 
+此操作将会创建一个包含模块字符串的 Orchard.en-us.po.zip 文件。命令将会遍历模块的源代码，然后创建所有需要被本地化处理的字符串条目——包括T方法包装的字符串，清单里的字符等。
 
-This will create a new Orchard.en-us.po.zip file with the strings for the module. The command looks at the source code for the module and creates entries for T-wrapped strings, manifest strings and everything that should be localizable.
+然后请将此文件发送至 <join-orchard-localization@lists.outercurve.org> ，这样我们可以将它添加到在线的本地化处理数据库中。
 
-Please send this file to <join-orchard-localization@lists.outercurve.org> so that we can add it to the online localization database.
+# 数据库驱动内容项的本地化处理
 
-# Localizing Database-Driven Content Items
+除了应用程序和模块本地化，Orchard提供使用数据库存储翻译内容项的功能。要本地化内容项，需要启用 **Localization** 功能。。在控制面板中，点击 **模块-Modules**，然后在 **功能-Features** 标签中可以看到 **Localization**。点击 **启用-Enable** 链接。 
 
-In addition to application and module localization, Orchard provides the ability to translate content items that are stored in the database. To localize content items, you must enable the **Localization** feature. In the dashboard, click **Modules**, and then on the **Features** tab you will see **Localization**. Click the **Enable** link. 
+![][106]
 
-![](../Upload/screenshots_675/Localize_enable_675.png)
+默认情况下，**Page** 和 **Blog Post** 两种内容类型都是可以本地化的，因为他们都包含 **Localization** 部分。你可以将 **Localization** 部分添加到其他需要翻译的内容类型中。在控制面板中，点击 **内容-Content** ，然后将可以在**管理内容-Manage Content** 界面查看内容项。注意：**+新建翻译 —— + New Translation** 链接是针对每一个内容项的。
 
-By default, both the **Page** and **Blog Post** content types are localizable, because they both contain the **Localization** part. You can add the **Localization** part to other content types that need translation. Click **Content** on the dashboard, and then view the items in the **Manage Content** screen. Notice the **+ New Translation** link for each content item.
+> 注：在新版中**Localization**模块的名称为**Content Localization**。同时要出现 **+新建翻译** 链接，你的网站首先需要配置多个支持语言。
 
-![](../Upload/screenshots_675/new_translation_675.png)
+![][107]
 
-> **Note** This link appears only if you have more than one culture enabled on the site (see previous section), and if you have enabled the **Localization** feature.
+点击 **+ New Translation** 链接允许你定义内容项的翻译版本，并可以关联上相应的“父”级内容项（网站默认语言）。每一个翻译的内容项都是一个独立的内容项存储在系统中。在 **翻译内容-Translate Content** 编辑界面，你可以定义内容项要使用的语言代码。永久链接内容会根据选择的语言切换对应的链接地址以此保证每个翻译都独立存在。然后，你就可以将内容翻译为选定语言。
 
-Clicking the **+ New Translation** link allows you to define a translated version of the content item to be associated with the "parent" content item (in the site's default culture). Each translated content item is treated as a unique content item in the system. On the **Translate Content** editor screen, you can define the culture code for the content item.  The permalink will change accordingly in order to ensure that URLs are unqiue for each translation. You can then translate the content item from the default site culture to the selected culture.
+![][108]
 
-![](../Upload/screenshots_675/Localize_content_675.png)
+在页面的主体部分添加一些翻译内容，然后点击 **保存-Save**。在内容项保存后，当前语言代码将会显示相应的不同语言的内容项链接。
 
-Add some translation text in the body of the page, and then click **Save**. After the content item is saved, the current culture code is indicated, along with links to any related content items in different cultures.
+当在网站上浏览内容项时，如果他又相应的翻译内容，翻译内容项的链接将会一起显示。这样对于你网站的访问者而言，他就比较方便的切换到其他语言。下图是浏览英文内容的示例：
 
-When you browse content items on the site, if there are translations available for a content item, links to those content items will be displayed. This makes it easy for your site visitors to switch between translations of the item.  This is what the site looks like when you view the English (en-US) item:
+![][109]
 
-![](../Upload/screenshots_675/Localize_en_downloadpg_675.png)
+点击语言链接查看相应的翻译版本。当你其他语言版本时，原始语言页面的链接将会显示出来。
 
-Click the culture code link to see translated version of the page. When you do, the original cultural code (en-US) appears as a link to the original page.
+![][110]
 
-![](../Upload/screenshots_675/Localize_fr_downloadpg_675.png)
+要为自定义内容类型启用本地化功能，则添加 **Localization** 部分到内容类型中。例如：为一个名叫**MyEvent**的自定义类型添加本地化功能，在控制面板中，点击 **内容定义** ，然后在 **内容类型-Content Types** 标签中，点击 **MyEvent** 类型的 **编辑** 链接 (示例假设此自定义类型已经存在)。然后点击 **添加元件-Add** ，然后在显示的添加元件界面，选择 **Localization** 或者要添加的其他元件
 
-To enable localization for custom content types, add the **Localization** part to the content type. For example, to add localization to a custom content type named **MyEvent**, click **Content** on the dashboard, and then click the **Content Types** tab.  Click **Edit** on the **MyEvent** type (this example assumes the custom type already exists).  Click **Add** in the **Parts** section of the type.  The **Add** screen is displayed, and you can select **Localization** or other parts to add.
+![][111]
 
-![](../Upload/screenshots/add_localization_part_MyEvent.png)
+关于创建自定义内容类型的更多内容见：[原文：Creating Custom Content Types][010]。
 
-For more information about creating and working with custom content types, refer to the [Creating Custom Content Types](Creating-custom-content-types) topic.
+> **注意** 本地化功能是仍在处理的工作，所以在Orchard应用中，不是所有的内容都已支持本地化。例如：Orchard还不支持通过给定Culture（浏览器默认Culture）自动筛选显示指定语言版本。我们会在以后的版本中解决这个问题。在此期间，你可以自己提供模块来实现`ICultureSelector`。如果你有什么关于本地化支持的内容要反馈给我们（如：帮助我们了解哪些场景对于你网站是比较重要的），请联系 <join-orchard-localization@lists.outercurve.org> ，并给我们发送相关信息。
 
-> **Note** The localization feature is a work in progress, and not all parts of the Orchard application are yet localizable. For example, Orchard does not yet provide an automatic way to filter and display only content items in a given culture (one instance of this is the browser's default culture). We will address this in a future release. In the meantime you can provide your own implementation of `ICultureSelector` in a module. If you want to give us feedback on localization support in Orchard (for example, to help us understand the scenarios that are important for your site), please contact at <join-orchard-localization@lists.outercurve.org> and drop us a line!
+# 翻译 Html 部件
 
-# Translating an Html Widget
+> **注** 以下步骤适用于全新安装的默认主题'The Theme Machine'
 
-> **Note** these steps apply to a clean installation using the default theme 'The Theme Machine'
+在控制面板中，首先点击 **模块-Modules** ，然后确认 **Localization** 模块已经安装并已启用。下一步点击 **内容定义** ，定位到 **内容类型-Content Types** 标签页面，然后点击 **Html Widget** 后的**编辑**。我们的目的是翻译Html部件，点击 **添加元件**，然后选择 **Localization** 元件并点击 **保存-Save** 来添加元件。最后在内容类型编辑页面，点击最下面的 **保存-Save** 来保存内容项的改变。
 
-In the admin panel, navigate to **Modules** and verify that you have the **Localization** module installed and enabled. The next step is to navigate to **Content** in the admin panel. Select the **Content Types** tab page on top and click **Edit** to adjust the **Html Widget**. Our goal is to translate a Html Widget. Click **Add Parts** in the Parts section. Here we select the **Localization** part and click **Save** to add this part. At the bottom of the page click **Save** again to save your Content Item adjustments.
+现在在控制面板中点击 **设置-Settings** 菜单项。在 **网站默认语言-Default Site Culture** 中，你可以添加你想支持的语言。在此案例中，我们使用nl-BE 和 en-US。点击 **保存-Save** 应用语言设置。
 
-Now we need to navigate to the **Settings** menu item in the admin panel. Under the section **Default Site Culture** you can add the cultures that you want to support. In our case we have nl-BE and en-US. Click **Save** to apply your culture settings.
-
-Navigate to the **Widgets** menu item.
-On the **Default** layer find for example the **FooterQuadThrid** section and click **Add** to add a Widget.
-Now you need to **Choose A Widget**, select the **Html Widget**, because this is the one that we adjust.
-Now fill in the needed information (Title and Content) and click **Save**. 
-Your Html Widget is now added to the FooterQuadThird section.
-Now we are ready to translate the item. Select you newly added widget to edit it. On top of the **Edit Widget** page you will find the following text: **+ New translation**. Click this to add the translation for another culture.
-
+点击 **部件-Widgets** 菜单项。
+在 **Default** 层找到一个示例区域，如 **FooterQuadThrid** ，然后点击 **Add** 添加部件。
+现在你需要选择一个部件，选择 **Html Widget** —— 之前配置的部件。
+然后，输入必须的项（标题和内容）并点击 **保存-Save**。 
+现在你的**Html Widget**已经添加到**FooterQuadThird**区域。
+接下来准备翻译，选择新添加的部件编辑。在编辑页面顶部找到 **+添加翻译 —— + New translation**链接。点击它来添加其他语言的翻译。
 
 
 ***
