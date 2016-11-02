@@ -14,6 +14,7 @@
 [011]: http://www.shisujie.com/blog/Organizing-content-with-tags
 [012]: http://www.shisujie.com/blog/Blogging-with-LiveWriter
 [013]: http://www.shisujie.com/blog/Creating-global-ready-applications
+[014]: http://www.shisujie.com/blog/Search-and-indexing
 
 
 ## 入门 ##
@@ -48,8 +49,8 @@
 <!--以下为网站使用管理相关内容-->
 * **网站内容管理——*Authoring Websites***
     * [使用Live Writer写博客——*Blogging with LiveWriter*][012]
-    * [创建全球通用应用——*Creating Global-Ready Applications*][013]
-    * [Search and Indexing](Documentation/Search-and-indexing)
+    * [创建全球通用应用——*Creating Global-Ready Applications*][013] ——效果可见：[关于我](http://www.shisujie.com/aboutme)
+    * [搜索与索引——*Search and Indexing*][014]
     * [Saving, Scheduling, and Publishing Drafts](Documentation/Saving-scheduling-and-publishing-drafts)
     * [Creating Custom Content Types](Documentation/Creating-custom-content-types)
 
