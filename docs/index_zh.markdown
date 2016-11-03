@@ -16,6 +16,7 @@
 [013]: http://www.shisujie.com/blog/Creating-global-ready-applications
 [014]: http://www.shisujie.com/blog/Search-and-indexing
 [015]: http://www.shisujie.com/blog/Saving-scheduling-and-publishing-drafts
+[016]: http://www.shisujie.com/blog/Creating-custom-content-types
 
 
 ## 入门 ##
@@ -48,12 +49,13 @@
 ## 资料 ##
 
 <!--以下为网站使用管理相关内容-->
-* **网站内容管理——*Authoring Websites***
+
+* **网站内容管理——*Authoring Websites***  
     * [使用Live Writer写博客——*Blogging with LiveWriter*][012]
     * [创建全球通用应用——*Creating Global-Ready Applications*][013] ——效果可见：[关于我](http://www.shisujie.com/aboutme)
     * [搜索与索引——*Search and Indexing*][014]
     * [草稿发布——*Saving, Scheduling, and Publishing Drafts*][015]
-    * [Creating Custom Content Types](Documentation/Creating-custom-content-types)
+    * [创建自定义内容类型——*Creating Custom Content Types*][016]
 
 
 * **Customizing Websites**
@@ -165,4 +167,4 @@
 * [Archived Specs](Documentation/Archived-specs)
 
 ***
-掘客：[奇葩史][000]
+掘：[奇葩史][000]
