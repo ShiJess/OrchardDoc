@@ -17,7 +17,11 @@
 [014]: http://www.shisujie.com/blog/Search-and-indexing
 [015]: http://www.shisujie.com/blog/Saving-scheduling-and-publishing-drafts
 [016]: http://www.shisujie.com/blog/Creating-custom-content-types
+[017]: http://docs.orchardproject.net/en/latest/Documentation/Previewing-and-applying-a-theme/
+[018]: http://docs.orchardproject.net/en/latest/Documentation/Installing-themes/
+[019]: http://www.shisujie.com/blog/Customizing-the-default-theme
 
+# Orchard官方教程（译）索引
 
 ## 入门 ##
 * [安装Orchard——*Installing Orchard*][001] 
@@ -48,7 +52,7 @@
 
 ## 资料 ##
 
-<!--以下为网站使用管理相关内容-->
+### 网站使用管理相关内容
 
 * **网站内容管理——*Authoring Websites***  
     * [使用Live Writer写博客——*Blogging with LiveWriter*][012]
@@ -58,21 +62,21 @@
     * [创建自定义内容类型——*Creating Custom Content Types*][016]
 
 
-* **Customizing Websites**
-    * [Previewing and Applying a Theme](Documentation/Previewing-and-applying-a-theme)
-    * [Installing Themes](Documentation/Installing-themes)
-    * [Customizing Themes](Documentation/Customizing-the-default-theme)
+* **网站定制——*Customizing Websites***
+    * [原文：Previewing and Applying a Theme][017]
+    * [原文：Installing Themes][018]
+    * [定制主题——*Customizing Themes*][019]
 
-
+<!-- 暂不翻译 内容为Orchard的应用模块库和主题库的使用
 * **Using the Orchard Gallery**
     * [Gallery Overview](Documentation/Gallery-overview)
     * [Installing Modules and Themes from the Gallery](Documentation/Installing-modules-and-themes-from-the-gallery)
     * [Browsing the Gallery Web Site](Documentation/Browsing-the-gallery-web-site)
     * [Contributing a Module or Theme to the Gallery](Documentation/Contributing-a-module-or-theme-to-the-gallery)
     * [Registering Additional Gallery Feeds](Documentation/Module-gallery-feeds)
+-->
 
-
-* **Managing Websites**
+* **网站管理——*Managing Websites***
     * [Enabling and Disabling Features](Documentation/Enabling-and-disabling-features)
     * [Using the Command-Line Interface](Documentation/Using-the-command-line-interface)
     * [Installing and Upgrading Modules](Documentation/Installing-and-upgrading-modules)
@@ -86,7 +90,9 @@
     * [Projection](Documentation/Projection)
     * [Create Dynamic Forms](Documentation/Creating-Dynamic-Forms "Use Dynamic Forms to create subscribe and contact us pages in Orchard")
 
-<!-- 以下为部署相关内容-->
+
+### 部署相关内容
+
 * **Hosting and Deploying Websites**
     * [Upgrading a Site to a New Version of Orchard](Documentation/Upgrading-a-site-to-a-new-version-of-Orchard)
     * [Optimizing Server Performance of Orchard Applications](Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting)
@@ -98,8 +104,10 @@
     * [Setting Up a Multi-Tenant Orchard Site](Documentation/Setting-up-a-multi-tenant-Orchard-site)
     * [Setting Up a Machine Key](Documentation/Setting-up-a-machine-key)
 
-<!--以下为网站开发相关内容-->
-<!--模块开发-->
+### 网站使用开发相关内容
+
+#### 模块开发
+
 * **Extending Orchard**
     * [First Steps into Orchard](Documentation/First-steps-into-Orchard)
     * [How Orchard Works](Documentation/How-Orchard-works)
@@ -127,7 +135,8 @@
     * [Understanding Content Handlers](Documentation/Understanding-content-handlers)
 <!-- ** [Understanding Content Drivers](Documentation/Understanding-content-drivers) (TBD) -->
 
-<!--主题开发相关-->
+#### 主题开发相关
+
 * **Creating Themes**
     * [Writing a New Theme](Documentation/Writing-a-new-theme)
     * [The Anatomy of a Theme](Documentation/Anatomy-of-a-theme)
@@ -139,7 +148,9 @@
     * [UI Guidelines for Theme Authors](Documentation/UI-guidelines-for-theme-authors)
     * [Customizing Orchard Using Designer Helper Tools](Documentation/Customizing-Orchard-using-Designer-Helper-Tools)
 
-<!--网站开发，针对要参与Orchard项目的开发-->
+
+### 网站开发，针对要参与Orchard项目的开发
+
 * **Developer Tools and Guidelines**
     * [Developer FAQ](Documentation/Developer-FAQ)
     * [Setting Up a Source Enlistment](Documentation/Setting-up-a-source-enlistment)
@@ -153,7 +164,9 @@
     * [Orchard Dynamic Compilation](Documentation/Orchard-module-loader-and-dynamic-compilation)
     * [Configuring Email](Documentation/Configuring-email)
 
-<!--关于贡献文档内容相关介绍-->
+
+### 关于贡献文档内容相关介绍
+
 * **Getting Involved**
     * [Contributing Documentation](Documentation/Contributing-documentation)
     * [Documentation Style Guidelines](Documentation/Documentation-Style-Guidelines)
