@@ -4,6 +4,7 @@
 [001]: http://docs.orchardproject.net/en/latest/Documentation/Customizing-the-default-theme/
 [002]: http://tryorchard.net/
 [003]: http://docs.orchardproject.net/en/latest/Documentation/Using-the-command-line-interface/
+[004]: http://www.shisujie.com/blog/Using-the-command-line-interface
 
 <!--图片链接集合-->
 [101]: http://docs.orchardproject.net/en/latest/Upload/screenshots/ThemeMachine_structure.PNG
@@ -65,7 +66,7 @@ Misc      | 包含其他杂项样式，如：small, large, quiet, 和 highlight.
 
 ## 生成主题结构
 
-要为新主题生成代码结构，我们会用到 **Code Generation** 功能 —— 在控制面板中点击**模块**就可以看到此功能包含在**功能**标签下。一旦启用code generation功能后，就可以在Orchard中用命令行生成新主题了。关于更多命令行的内容见：[原文：Using the command-line interface][003]。
+要为新主题生成代码结构，我们会用到 **Code Generation** 功能 —— 在控制面板中点击**模块**就可以看到此功能包含在**功能**标签下。一旦启用code generation功能后，就可以在Orchard中用命令行生成新主题了。关于更多命令行的内容见：[原文：Using the command-line interface][003]、[译文：使用命令行界面][004]。
 
 打开Orchard命令行工具，然后输入以下命令 ：
     

@@ -20,8 +20,19 @@
 [017]: http://docs.orchardproject.net/en/latest/Documentation/Previewing-and-applying-a-theme/
 [018]: http://docs.orchardproject.net/en/latest/Documentation/Installing-themes/
 [019]: http://www.shisujie.com/blog/Customizing-the-default-theme
+[020]: http://docs.orchardproject.net/en/latest/Documentation/Enabling-and-disabling-features/
+[021]: http://www.shisujie.com/blog/Using-the-command-line-interface
+[022]: http://docs.orchardproject.net/en/latest/Documentation/Installing-and-upgrading-modules/
+[023]: http://docs.orchardproject.net/en/latest/Documentation/Modifying-site-settings/
+[024]: http://docs.orchardproject.net/en/latest/Documentation/Moderating-comments/
+[025]: http://docs.orchardproject.net/en/latest/Documentation/Managing-users-and-roles/
+[026]: http://docs.orchardproject.net/en/latest/Documentation/Understanding-permissions/
+[027]: http://docs.orchardproject.net/en/latest/Documentation/Making-a-Web-Site-Recipe/
+[028]: http://docs.orchardproject.net/en/latest/Documentation/Creating-an-image-gallery/
 
 # Orchard官方教程（译）索引
+
+> 链接标注**原文**则表示未译，其他带有中文标题的表示译文内容
 
 ## 入门 ##
 * [安装Orchard——*Installing Orchard*][001] 
@@ -76,18 +87,19 @@
     * [Registering Additional Gallery Feeds](Documentation/Module-gallery-feeds)
 -->
 
-* **网站管理——*Managing Websites***
-    * [Enabling and Disabling Features](Documentation/Enabling-and-disabling-features)
-    * [Using the Command-Line Interface](Documentation/Using-the-command-line-interface)
-    * [Installing and Upgrading Modules](Documentation/Installing-and-upgrading-modules)
-    * [Modifying Site Settings](Documentation/Modifying-site-settings)
-    * [Moderating Comments](Documentation/Moderating-comments)
-    * [Managing Users and Roles](Documentation/Managing-users-and-roles)
-    * [Understanding Permissions](Documentation/Understanding-permissions)
-    * [Making a Website Recipe](Documentation/Making-a-Web-Site-Recipe)
-    * [Creating an Image Gallery](Documentation/Creating-an-image-gallery)
+* **网站管理——_Managing Websites_**
+    * [原文：Enabling and Disabling Features][020]
+    * [使用命令行界面——*Using the Command-Line Interface*][021]
+    * [原文：Installing and Upgrading Modules][022]
+    * [原文：Modifying Site Settings][023]
+    * [原文：Moderating Comments][024]
+    * [原文：Managing Users and Roles][025]
+    * [原文：Understanding Permissions][026]
+    * [原文：Making a Website Recipe][027]
+    * [原文：Creating an Image Gallery][028] —— 官网指明此文是草稿，且针对开发人员
     * [Workflows](Documentation/Workflows)
     * [Projection](Documentation/Projection)
+    * Create Custom Forms ——官网中图片基本都无效，应该大部分链接路径是upload中U要大写
     * [Create Dynamic Forms](Documentation/Creating-Dynamic-Forms "Use Dynamic Forms to create subscribe and contact us pages in Orchard")
 
 
