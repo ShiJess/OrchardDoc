@@ -29,6 +29,7 @@
 [026]: http://docs.orchardproject.net/en/latest/Documentation/Understanding-permissions/
 [027]: http://docs.orchardproject.net/en/latest/Documentation/Making-a-Web-Site-Recipe/
 [028]: http://docs.orchardproject.net/en/latest/Documentation/Creating-an-image-gallery/
+[029]: http://www.shisujie.com/blog/Workflows
 
 # Orchard官方教程（译）索引
 
@@ -97,7 +98,7 @@
     * [原文：Understanding Permissions][026]
     * [原文：Making a Website Recipe][027]
     * [原文：Creating an Image Gallery][028] —— 官网指明此文是草稿，且针对开发人员
-    * [Workflows](Documentation/Workflows)
+    * [工作流——*Workflows*][029]
     * [Projection](Documentation/Projection)
     * Create Custom Forms ——官网中图片基本都无效，应该大部分链接路径是upload中U要大写
     * [Create Dynamic Forms](Documentation/Creating-Dynamic-Forms "Use Dynamic Forms to create subscribe and contact us pages in Orchard")
