@@ -30,6 +30,9 @@
 [027]: http://docs.orchardproject.net/en/latest/Documentation/Making-a-Web-Site-Recipe/
 [028]: http://docs.orchardproject.net/en/latest/Documentation/Creating-an-image-gallery/
 [029]: http://www.shisujie.com/blog/Workflows
+[030]: http://docs.orchardproject.net/en/latest/Documentation/Projection/
+[031]: http://docs.orchardproject.net/en/latest/Documentation/Creating-Custom-Forms/
+[032]: https://github.com/ShiJess/OrchardDoc/blob/chinesedoc/docs/Documentation/Creating-Custom-Forms.markdown
 
 # Orchard官方教程（译）索引
 
@@ -99,8 +102,9 @@
     * [原文：Making a Website Recipe][027]
     * [原文：Creating an Image Gallery][028] —— 官网指明此文是草稿，且针对开发人员
     * [工作流——*Workflows*][029]
-    * [Projection](Documentation/Projection)
-    * Create Custom Forms ——官网中图片基本都无效，应该大部分链接路径是upload中U要大写
+    * [原文：Projection][030]
+    * [原文：Create Custom Forms][031] —— 在Orchard1.9之后此功能已弃用，建议使用Dynamic Forms，即下节；另，官网中图片基本都无效，应该大部分链接路径是upload中U要大写
+        * 另要查看图片可以显示的页面可以查看此处链接：[Create Custom Forms][032]
     * [Create Dynamic Forms](Documentation/Creating-Dynamic-Forms "Use Dynamic Forms to create subscribe and contact us pages in Orchard")
 
 

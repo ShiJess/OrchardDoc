@@ -109,7 +109,7 @@ Orchard中的**工作流**模块为我们提供了创建自定义工作流的功
 
 	<p>Message : {Content.Fields.ContactUs.Message}</p>
 
-> 关于此处取值不同版本可能各不相同，建议研究Form创建后再看此部分内容，如本人在取值时，需要`{FormSubmission.Field:Email}`来处理
+> 关于此处取值不同版本、不同的窗体使用方式可能各不相同，建议研究Form创建后再看此部分内容，如本人在取值时，有`{FormSubmission.Field:Email}`来处理
 
 ![][112]
 
