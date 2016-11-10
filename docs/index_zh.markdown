@@ -33,31 +33,41 @@
 [030]: http://docs.orchardproject.net/en/latest/Documentation/Projection/
 [031]: http://docs.orchardproject.net/en/latest/Documentation/Creating-Custom-Forms/
 [032]: https://github.com/ShiJess/OrchardDoc/blob/chinesedoc/docs/Documentation/Creating-Custom-Forms.markdown
+[033]: http://www.shisujie.com/blog/Creating-Dynamic-Forms
+[034]: http://docs.orchardproject.net/en/latest/Documentation/Gallery-overview/
+[035]: http://docs.orchardproject.net/en/latest/Documentation/Installing-modules-and-themes-from-the-gallery/
+[036]: http://docs.orchardproject.net/en/latest/Documentation/Browsing-the-gallery-web-site/
+[037]: http://docs.orchardproject.net/en/latest/Documentation/Contributing-a-module-or-theme-to-the-gallery/
+[038]: http://docs.orchardproject.net/en/latest/Documentation/Module-gallery-feeds/
+[039]: http://docs.orchardproject.net/en/latest/Documentation/Basic-Orchard-Concepts/
+[040]: http://docs.orchardproject.net/en/latest/Documentation/Builtin-Features/
+[041]: http://docs.orchardproject.net/en/latest/Documentation/Feature-roadmap/
+[042]: http://docs.orchardproject.net/en/latest/Documentation/Frequently-asked-questions/
 
 # Orchard官方教程（译）索引
 
-> 链接标注**原文**则表示未译，其他带有中文标题的表示译文内容
+> 链接标注 **原文** 则表示未译，其他带有**中文标题**的表示译文内容
 
 ## 入门 ##
-* [安装Orchard——*Installing Orchard*][001] 
-* [通过zip包手动安装Orchard——*Manually Installing Orchard Using a .zip File*][002]
-* [使用WebMatrix管理Orchard网站——*Working with Orchard in WebMatrix*][003]
-* [Orchard控制面板概览——*Getting Around the Dashboard*][004]
-* [构建你的第一个Orchard网站——*Building Your First Orchard Site*][005]
-* [导航与菜单——*Navigation and Menus*][006]
-* [给网站添加新博客——*Adding a Blog to Your Site*][007]
-* [给网站添加页面——*Adding Pages to Your Site*][008]
-* [媒体文件的添加与管理——*Adding and Managing Media Content*][009]
-* [部件管理——*Managing Widgets*][010]
-* [使用标签管理内容——*Organizing Content Using Tags*][011]
 
-<!-- 暂不翻译
-## About the Project ##
-* [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
-* [A Guide to All the Built-in Modules and Features of Orchard](Documentation/Builtin-Features)
-* [What's Happening Now?](Documentation/Feature-roadmap)
-* [Frequently Asked Questions](Documentation/Frequently-asked-questions)
--->
+* [**安装Orchard**——*Installing Orchard*][001] 
+* [**通过zip包手动安装Orchard**——*Manually Installing Orchard Using a .zip File*][002]
+* [**使用WebMatrix管理Orchard网站**——*Working with Orchard in WebMatrix*][003]
+* [**Orchard控制面板概览**——*Getting Around the Dashboard*][004]
+* [**构建你的第一个Orchard网站**——*Building Your First Orchard Site*][005]
+* [**导航与菜单**——*Navigation and Menus*][006]
+* [**给网站添加新博客**——*Adding a Blog to Your Site*][007]
+* [**给网站添加页面**——*Adding Pages to Your Site*][008]
+* [**媒体文件的添加与管理**——*Adding and Managing Media Content*][009]
+* [**部件管理**——*Managing Widgets*][010]
+* [**使用标签管理内容**——*Organizing Content Using Tags*][011]
+
+## 关于项目——_About the Project_ ##
+
+* [原文：Orchard Concept Definitions][039]
+* [原文：A Guide to All the Built-in Modules and Features of Orchard][040]
+* [原文：What's Happening Now?][041]
+* [原文：Frequently Asked Questions][042]
 
 ## 视频教程 ##
 
@@ -70,30 +80,28 @@
 ### 网站使用管理相关内容
 
 * **网站内容管理——*Authoring Websites***  
-    * [使用Live Writer写博客——*Blogging with LiveWriter*][012]
-    * [创建全球通用应用——*Creating Global-Ready Applications*][013] ——效果可见：[关于我](http://www.shisujie.com/aboutme)
-    * [搜索与索引——*Search and Indexing*][014]
-    * [草稿发布——*Saving, Scheduling, and Publishing Drafts*][015]
-    * [创建自定义内容类型——*Creating Custom Content Types*][016]
+    * [**使用Live Writer写博客**——*Blogging with LiveWriter*][012]
+    * [**创建全球通用应用**——*Creating Global-Ready Applications*][013] ——效果可见：[关于我](http://www.shisujie.com/aboutme)
+    * [**搜索与索引**——*Search and Indexing*][014]
+    * [**草稿发布**——*Saving, Scheduling, and Publishing Drafts*][015]
+    * [**创建自定义内容类型**——*Creating Custom Content Types*][016]
 
 
 * **网站定制——*Customizing Websites***
     * [原文：Previewing and Applying a Theme][017]
     * [原文：Installing Themes][018]
-    * [定制主题——*Customizing Themes*][019]
+    * [**定制主题**——*Customizing Themes*][019]
 
-<!-- 暂不翻译 内容为Orchard的应用模块库和主题库的使用
-* **Using the Orchard Gallery**
-    * [Gallery Overview](Documentation/Gallery-overview)
-    * [Installing Modules and Themes from the Gallery](Documentation/Installing-modules-and-themes-from-the-gallery)
-    * [Browsing the Gallery Web Site](Documentation/Browsing-the-gallery-web-site)
-    * [Contributing a Module or Theme to the Gallery](Documentation/Contributing-a-module-or-theme-to-the-gallery)
-    * [Registering Additional Gallery Feeds](Documentation/Module-gallery-feeds)
--->
+* **Orchard库使用——_Using the Orchard Gallery_**
+    * [原文：Gallery Overview][034]
+    * [原文：Installing Modules and Themes from the Gallery][035]
+    * [原文：Browsing the Gallery Web Site][036]
+    * [原文：Contributing a Module or Theme to the Gallery][037]
+    * [原文：Registering Additional Gallery Feeds][038]
 
 * **网站管理——_Managing Websites_**
     * [原文：Enabling and Disabling Features][020]
-    * [使用命令行界面——*Using the Command-Line Interface*][021]
+    * [**使用命令行界面**——*Using the Command-Line Interface*][021]
     * [原文：Installing and Upgrading Modules][022]
     * [原文：Modifying Site Settings][023]
     * [原文：Moderating Comments][024]
@@ -101,11 +109,11 @@
     * [原文：Understanding Permissions][026]
     * [原文：Making a Website Recipe][027]
     * [原文：Creating an Image Gallery][028] —— 官网指明此文是草稿，且针对开发人员
-    * [工作流——*Workflows*][029]
+    * [**工作流**——*Workflows*][029]
     * [原文：Projection][030]
     * [原文：Create Custom Forms][031] —— 在Orchard1.9之后此功能已弃用，建议使用Dynamic Forms，即下节；另，官网中图片基本都无效，应该大部分链接路径是upload中U要大写
         * 另要查看图片可以显示的页面可以查看此处链接：[Create Custom Forms][032]
-    * [Create Dynamic Forms](Documentation/Creating-Dynamic-Forms "Use Dynamic Forms to create subscribe and contact us pages in Orchard")
+    * [**创建动态表单**——*Create Dynamic Forms*][033]
 
 
 ### 部署相关内容

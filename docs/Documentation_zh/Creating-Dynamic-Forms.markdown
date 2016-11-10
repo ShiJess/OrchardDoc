@@ -2,23 +2,18 @@
 <!--URL域 http://docs.orchardproject.net/en/latest -->
 [000]: http://www.shisujie.com
 [001]: http://docs.orchardproject.net/en/latest/Documentation/Creating-Dynamic-Forms/
+[002]: http://www.shisujie.com/blog/Creating-Dynamic-Forms
 
 <!--图片链接集合-->
 [101]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/enable-dynamic-forms.png "Enable the Dynamic Forms module"
 [102]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/dynamic-forms-new-content-type-subscribe-form.png "New Orchard CMS content type"
 [103]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/subscribe-form-email-field.png "Add Email input field the Subscribe Form content type"
 [104]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/subscribe-form.png "Subscribe Form content type"
-
-//换自己的截图
-[105]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/subscribe-form.png "Add new Widget to AsideSecond zone"
-[106]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/subscribe-form.png "Add new Widget to AsideSecond zone"
-
+[105]: https://raw.githubusercontent.com/ShiJess/OrchardDoc/chinesedoc/docs/Upload/dynamic-forms/add-widget-to-asidesecond.png "Add new Widget to AsideSecond zone"
+[106]: https://raw.githubusercontent.com/ShiJess/OrchardDoc/chinesedoc/docs/Upload/dynamic-forms/add-widget-to-asidesecond2.png "Add new Widget to AsideSecond zone"
 [107]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/dynamic-forms-edit-layout.png "Forms Widget Layout"
 [108]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/dynamic-forms-edit-email-field.png "Edit Email Field"
-
-//
-[109]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/subscribe-form.png "Add new Widget to AsideSecond zone"
-
+[109]: https://raw.githubusercontent.com/ShiJess/OrchardDoc/chinesedoc/docs/Upload/dynamic-forms/open-edit-form.png "Add new Widget to AsideSecond zone"
 [110]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/dynamic-forms-bind-form.png "Bind Form to Content"
 [111]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/dynamic-forms-bind-email.png "Bind Email Field"
 [112]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/news-letter-widget.png "Dynamic Forms Widget"
@@ -33,7 +28,8 @@
 [121]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/exporting-form-submissions.png "Exporting Form Submissions"
 
 
-> 原文链接：[Create Dynamic Forms][001]
+> 原文链接：[Create Dynamic Forms][001]  
+> 译文链接：[Orchard网站管理——创建动态表单][002]
 
 Dynamic Forms模块用于从网站前台获取访问者提交的信息。Dynamic Forms可以和其他内容类型合起来使用，也可以单独使用。Dynamic Forms可用于创建 *联系我们* 和 *订阅* 部件/页面等等。提交信息可以存储在Orchard中，而且可以在以后导出。
 
