@@ -115,7 +115,8 @@
         * 另要查看图片可以显示的页面可以查看此处链接：[Create Custom Forms][032]
     * [**创建动态表单**——*Create Dynamic Forms*][033]
 
-
+<!--
+    
 ### 部署相关内容
 
 * **Hosting and Deploying Websites**
@@ -129,12 +130,14 @@
     * [Setting Up a Multi-Tenant Orchard Site](Documentation/Setting-up-a-multi-tenant-Orchard-site)
     * [Setting Up a Machine Key](Documentation/Setting-up-a-machine-key)
 
+-->
+
 ### 网站使用开发相关内容
 
-#### 模块开发
+#### 模块开发相关
 
-* **Extending Orchard**
-    * [First Steps into Orchard](Documentation/First-steps-into-Orchard)
+* **Orchard扩展——_Extending Orchard_**
+    * [初步理解   First Steps into Orchard](Documentation/First-steps-into-Orchard)
     * [How Orchard Works](Documentation/How-Orchard-works)
     * [Command-Line Code Generation](Documentation/Command-line-scaffolding)
     * [Getting Started with Modules Course](Documentation/Getting-Started-with-Modules)
