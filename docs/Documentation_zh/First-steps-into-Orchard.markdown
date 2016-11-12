@@ -18,6 +18,19 @@
 [015]: http://www.shisujie.com/blog/Customizing-the-default-theme
 [016]: http://docs.orchardproject.net/en/latest/Documentation/Managing-widgets/
 [017]: http://www.shisujie.com/blog/Managing-widgets
+[018]: http://docs.orchardproject.net/en/latest/Documentation/Search-and-indexing/
+[019]: http://www.shisujie.com/blog/Search-and-indexing
+[020]: http://docs.orchardproject.net/en/latest/Documentation/Blogging-with-LiveWriter/
+[021]: http://www.shisujie.com/blog/Blogging-with-LiveWriter
+[022]: http://docs.orchardproject.net/en/latest/Documentation/Getting-Started-with-Modules/
+[023]: http://docs.orchardproject.net/en/latest/Documentation/Packaging-and-sharing-a-module/
+[024]: http://docs.orchardproject.net/en/latest/Documentation/Installing-and-upgrading-modules/
+[025]: http://docs.orchardproject.net/en/latest/Documentation/Gallery-overview
+[026]: http://docs.orchardproject.net/en/latest/Documentation/Creating-custom-content-types/
+[027]: http://www.shisujie.com/blog/Creating-custom-content-types
+[028]: http://docs.orchardproject.net/en/latest/Documentation/Writing-a-content-part/
+[029]: http://docs.orchardproject.net/en/latest/Documentation/Creating-a-custom-field-type/
+[030]: http://docs.orchardproject.net/en/latest/Documentation/Contributing-patches/
 
 <!--图片链接集合-->
 [101]: http://docs.orchardproject.net/en/latest/Attachments/First-Steps-Into-Orchard/Orchard-Installation.png
@@ -101,45 +114,46 @@ Orchard网站和其他任何**网站**一样 —— 以一个前台页面开始�
 
 Orchard是以模块组织的。每一个模块通过一个高级别的目标实现来为网站提供构建块（又叫附加或外挂）。例如，你可以有以下模块：
 
-* Extension module: Adds some (low-level) features that will benefit the website. Eg: Ability to [search your content](Search-and-indexing) or to [use an external editor to write blog posts (like Live Writer)](Blogging-with-LiveWriter)
+* 扩展模块：为网站添加有用的功能（底层的）。如：添加搜索功能，详见：[原文：Search and Indexing][018]、[译文：Orchard网站内容管理——搜索与索引][019]，或者添加外部编辑器（如Liver Writer）支持，详见：[原文：Blogging with LiveWriter][020]、[译文：Orchard网站内容管理——使用Live Writer写博客][021]。
 
-* Content module: Adds everything (code and visual) required to view/edit some type of content (like blog posts)
+* 内容模块：为查看/编辑内容的类型（如博文）添加所需要的一切（代码和可视化）
 
-* Widget module: Adds a small visual content that can be displayed on the side of existing content modules (like a Tag cloud next to a blog)
+* 部件模块：在内容模块旁边添加小的可视化内容，如在博客边上添加标签云
 
-* Element module: Adds a small contained element for use in the Orchard.Layouts module, a core module that lets you design page layouts in the browser.
+* 元素模块：在Orchard.Layouts模块中添加小的要包含的元素，这是让你的设计页面显示在浏览器中的核心模块。
 
-* Theme module: Changes the look of existing content modules (This is what the designer would typically create)
+* 主题模块：改变已有的内容模块的外观。—— 这是设计师通常需要创建的模块。
 
-* All the above: A module can have many extensions, content types, widgets and themes all in one package 
+* 上面所有的集合：一个模块可以在一个包中含有多个扩展、内容类型、部件和主题。 
 
-Orchard is designed to be highly extensible; this means that almost anything that you interact with can be extended, replaced or disabled.
-Out of the box, Orchard comes with a number of modules to provide a good user/administrator experience; but a designer/developer can change them or [create more](Getting-Started-with-Modules). It is also possible to [share your modules](Packaging-and-sharing-a-module) with the Orchard community and to [install modules](Installing-and-upgrading-modules) developed by others.
+Orchard采用了高度可扩展设计 —— 这意味着几乎所有你要交互的事都可以扩展，取代或禁用。
+Orchard默认提供一系列的模块，为此可以提供给用户/管理员良好的体验，但是设计者/开发者可以修改他们，或者创建更多，关于如何创建模块见：[原文：Getting Started with Modules][022]。它还允许你共享你的模块到Orchard社区，或者安装有其他人开发的模块。更多内容见：[原文：Packaging and Sharing a Module][023]、[原文：Installing and Upgrading Modules][024]。
 
-Orchard comes with only one theme (called "[The Theme Machine](Anatomy-of-a-theme)"). However, it has enough zones to allow various arrangements. This is important because a site can only have one theme active at a time. This means the theme must be flexible enough to allow pages to have different layouts. If you are not satisfied, you can copy it and add more zones.
+Orchard默认只附带一个主题 —— [The Theme Machine]。但是，它含有足够的区域供不同的安排，这非常重要，因为一个网站在一个时间上只能使用一个主题。这就意味着主题必须足够灵活以允许所有的页面使用不同的布局。如果它无法满足你，你可以拷贝它并添加更多区域。
 
-[The Orchard Gallery](Gallery-overview) contains a lot more themes and modules ready to install. Make sure to browse it to find out what extra features are available.
+在[Orchard Gallery][025]中，含有大量的主题和模块以供安装。你可以通过浏览它并从中找到额外的可用功能。
 
-## Content
-In order to fill your website, Orchard allows you to edit and display content. It comes with the ability to create pages and blog posts out of the box. But it also allows you to define your own content. This is important because you may want to have events or profiles or anything else that isn't supported out of the box. This section explains the various elements that plays into providing that capability.
+## 内容
 
-* **Content:** Data that is typically displayed on the front-end website. I use this term as a generic way of calling anything that is user-generated.
+为了填充你的网站，Orchard允许你编辑和展示内容。在默认安装中，它含有创建页面和博文的功能。但是他也允许你定义自己的内容，这很重要，因为你可能需要创建事件或简介，或任何其他的内容，但在Orchard中是没有默认提供的。本节介绍了提供该功能的各种元素：
 
+* **内容——Content:** 通常是网站前台页面显示的数据。可将它作为调用用户产生的任何东西的通用方式。
 
-* **[Content Type &amp; Item](Creating-custom-content-types)**: A **content type** is like a dynamic class; it defines a structure of data for a specific type of content. That structure can be changed, even by the administrator. A **content item** is an instance of content type. So, BlogPost can be a content type, and when you write one, that one is a content item.
+* **[内容类型和项目][027] —— [Content Type &amp; Item][026]**: **内容类型**类似于动态类，它用于定义特殊类型内容的数据结构。结构可以被修改，管理员也可以修改结构。**内容项**是内容类型的一个实例。因此，BlogPost是一个内容类型，当你写了一篇博文，那篇博文就是一个内容项。
 
-* **[Content Part](Writing-a-content-part)**: Because many content types share many aspects; these aspects can be created independently and reused in each content type. That's what a content part is. Eg: A blog post can have comments; a photo can also have comments; so, instead of implementing the "comments" feature twice, we can create it as a content part and reuse it for both content types.
+* **内容块——[Content Part][028]**: 因为内容类型共享许多方面，那些方面可以单独创建，也可以在每种内容类型中重复使用。如：一篇博文可能含有评论，一张照片也可以含有评论，因此，我们可以创建一个评论部分，并在两个内容类型中重用，这避免了在实现两次评论功能。
 
-* **[Content Field](Creating-a-custom-field-type)**: In the same spirit of reusability, we can have smaller types that must behave in a certain way. Eg: Most content types will need Date, phone number, email address, etc. They aren't simple properties since we can attach some behavior (like validation rules) but they aren't content parts either (too "small").
-* **Record**: In order to be able to save a content type/part (in a SQL database), it needs to be "linked" to a record. It is a class with all the properties that should be saved. Eg: A Map part must save its coordinates (Latitude &amp; Longitude), so it will be linked to a record with these two properties; and Orchard will do the rest to load/save it. You will not have to deal with records unless you [develop your own module](Getting-Started-with-Modules). But it is useful to understand this concept in case you encounter it.
-* **Record**: In order to be able to save a content type/part (in a database), it needs to be "linked" to a record. It is a class with all the properties that should be saved. Eg: A Map part must save its coordinates (Latitude &amp; Longitude), so it will be linked to a record with these two properties; and Orchard will do the rest to load/save it. You will not have to deal with records unless you [develop your own module](Building-a-hello-world-module). But it is useful to understand this concept in case you encounter it.
+* **内容字段——[Content Field][029]**: 与内容块一样，为了可以重复使用，我们可能需要创建更小型的类型来处理必须要以某些方式表现的内容。例如：大部分内容类型包含日期、电话号码、电子邮件地址等。他们不是简单的属性，因为我们可以附加一些行为（如验证规则）；他们也不是内容块，因为他们太“小”。
 
-Note that a content type can only have one of each kind of content parts. But it can have many fields of the same kind. The reason is in the semantic meaning of these concepts. For example, a blog post can only have one commenting aspect and it can have many dates (creation date, last update date, etc.).
+* **记录——Record**: 为了可以保存一个内容类型/部分（保存到SQL数据库）,它需要关联到一条记录。它是一个类，且它的所有属性都需要保存。例如：Map部分必须保存它的坐标（纬度和经度），因此他会关联到一条含有两个属性的记录，然后Orchard会完成加载和保存的操作。你不许要自己处理记录，除非你开发自己的模块，但是在你遇到它时，理解本概念是有帮助的。关于更多开发模块见：[原文：Getting Started with Modules][022]。
 
-Since Orchard is an [open source project](frequently-asked-questions), feel free to [contribute](Contributing-patches) any feature/module you would like.
+注意，在每个内容类型中，每个内容块最多只能有一个。但是在同一类型中含有多个字段。原因在于这些概念的语义含义。例如：一篇博文中只能有一个评论部分，但它可以有很多日期（创建日期、最后更新日期等）。
 
-## Conclusion
-We are going to stop here. At this point, you should have a good understanding of what is Orchard. The next step is to get into a bit more details about modules, themes and the [low-level architecture of Orchard](How-Orchard-works). This would be useful when you start learning [how to extend Orchard](Getting-Started-with-Modules).
+由于Orchard是开源项目，你可以自由贡献你想要的功能或模块。更多内容见：[原文：Frequently Asked Questions][003]、[原文：Contributing Patches][030]。
+
+## 结语
+
+至此，你应该对Orchard有一个比较好的理解。下一步将会更多的讨论模块、主题以及Orchard的底层架构。这在进行扩展开发之前是比较有用的。
 
 ***
 译：[奇葩史][000]
