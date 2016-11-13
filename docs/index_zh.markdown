@@ -43,6 +43,8 @@
 [040]: http://docs.orchardproject.net/en/latest/Documentation/Builtin-Features/
 [041]: http://docs.orchardproject.net/en/latest/Documentation/Feature-roadmap/
 [042]: http://docs.orchardproject.net/en/latest/Documentation/Frequently-asked-questions/
+[043]: http://www.shisujie.com/blog/First-steps-into-Orchard
+[044]: http://www.shisujie.com/blog/How-Orchard-works
 
 # Orchard官方教程（译）索引
 
@@ -137,8 +139,8 @@
 #### 模块开发相关
 
 * **Orchard扩展——_Extending Orchard_**
-    * [初步理解   First Steps into Orchard](Documentation/First-steps-into-Orchard)
-    * [How Orchard Works](Documentation/How-Orchard-works)
+    * [初步理解Orchard——*First Steps into Orchard*][043]
+    * [Orchard的工作原理——*How Orchard Works*][044]
     * [Command-Line Code Generation](Documentation/Command-line-scaffolding)
     * [Getting Started with Modules Course](Documentation/Getting-Started-with-Modules)
         * [Part 1 - Build a Static Widget](Documentation/Getting-Started-with-Modules-Part-1)
