@@ -12,6 +12,8 @@
 [106]: http://docs.orchardproject.net/en/latest/Attachments/Navigation-and-menus/IndentedMenu.png
 [107]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/manage_menu_675.png
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Navigation and Menus][001]
 
 *文章内容基于Orchard1.8版本。同时包含Orchard 1.5之前版本的导航参考*

@@ -30,6 +30,8 @@
 <!--图片链接集合-->
 [101]: http://docs.orchardproject.net/en/latest/Attachments/Getting-around-the-dashboard/Dashboard.png
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Getting Around the Dashboard][001]
 
 *文章内容基于Orchard 1.8版本*

@@ -11,6 +11,8 @@
 [104]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/widgets_AddZone_1_675.png
 [105]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/widgets_Delete_1_675.png
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Managing Widgets][001] 
 
 在Orchard中，部件是可以加入到当前当前主题任何位置或区域（如侧栏*sidebar*或底部区域*footer*）的UI块（如：HTML）或代码部分（如：内容部分）。常见部件示例包括：导航菜单*navigation menus*, 图片库*image galleries*, 广告*ads*, 视频*videos*, 以及标记云图*tag clouds*

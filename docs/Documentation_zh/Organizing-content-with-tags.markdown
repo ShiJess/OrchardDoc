@@ -10,6 +10,8 @@
 [104]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/manage_tags3.png
 [105]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/Tags_manage.png
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Organizing Content Using Tags][001]
 
 在Orchard中，内容项可以使用标签来分类，同时，通过格式为 ~/tags/_tag-name_ 的url可以直接查看包含对应标签关键字的内容项列表。当用户选中某一标签时，浏览器会自动跳转到对应标签的内容项列表。 

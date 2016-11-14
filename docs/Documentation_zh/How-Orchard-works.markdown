@@ -8,11 +8,15 @@
 [005]: https://autofac.org/
 [006]: https://en.wikipedia.org/wiki/Inversion_of_control
 [007]: http://www.castleproject.org/projects/dynamicproxy/
+[008]: https://zh.wikipedia.org/wiki/多租户技术
 
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[How Orchard Works][001]  
 > 译文链接：[Orchard扩展——Orchard的工作原理][002]  
-> 本文为纯文字内容，稍显枯燥，不过若能全篇理一遍，对Orchard的整体架构技术可以有个比较好的了解。
+> 本文为纯文字内容，稍显枯燥，不过若能全篇理一遍，对Orchard的整体架构技术可以有个比较好的了解。  
+> 另，本文有些内容个人看的时候还是一头雾水，有些地方翻译会比较晦涩。
 
 
 构建一个web cms与常规的web应用有所不同，它更像是构建一个应用容器。当设计一个这类系统，我们需要把可扩展性作为首要功能特性。这是一个的挑战，因为开放式的架构会需要有很好的扩展性，但这可能需要降低应用的可用性来满足：系统中所有内容都需要能够和未来未知的模块进行组合，包括在UI层。将所有不互通的小部件组织为一个连贯的整体就是所谓的Orchard。
@@ -52,25 +56,29 @@ Orchard CMS是建立在现有框架和库之上的。以下是其中最基本的
 
 Orchard应用及框架是在这些基础框架之上建立额外的抽象层。Orchard中有许多方法来实现具体功能内容，且不一定需要知道NHibernate, Castle, 或 Autofac。
 
-# Orchard Framework
+# Orchard框架
 
-The Orchard framework is the deepest layer of Orchard. It contains the engine of the application or at least the parts that couldn't be isolated into modules. Those are typically things that even the most fundamental modules will have to rely on. You can think of it as the base class library for Orchard.
+Orchard框架是Orchard中最低层的东西。它包含了应用程序的引擎以及不能继续拆分为模块的部分。那些东西通常是最基本的模块都要依赖的。你可以把它当作Orchard的基础类库。
 
-## Booting Up Orchard
+## Orchard启动
 
-When an Orchard web application spins up, an Orchard Host gets created. A host is a singleton at the app domain level.
+> 关于本节中“租户（tenant）”一词，网络未找到比较好的解释，仅在维基百科中的多租户技术中提到此词的解释：  
+> 租户（tenant）是指使用系统或电脑运算资源的客户。  
+> [多租户概念维基百科链接][008] —— **墙外链接**
 
-Next, the host will get the Shell for the current tenant using the ShellContextFactory. Tenants are instances of the application that are isolated as far as users can tell but that are running within the same appdomain, improving the site density. The shell is a singleton at the tenant level and could actually be said to represent the tenant. It's the object that will effectively provide the tenant-level isolation while keeping the module programming model agnostic about multi-tenancy.
+当Orchard web应用启动时，一个Orchard主机服务将会被创建。其主机服务为一个应用程序域级别的单例。
 
-The shell, once created, will get the list of available extensions from the ExtensionManager. Extensions are modules and themes. The default implementation is scanning the modules and themes directories for extensions.
+然后，主机服务会使用ShellContextFactory来为当前租户获取一个Shell。租户是应用程序的实例，它被拆分到了用户操作级别，但是它们还运行在同一个应用程序域 —— 提高网站的密度。Shell在租户级别是一个单例，或者可以说它实际上代表租户。它在租户级别有效的隔离了对象，并且保证了模块的编程模型与多租户无关。
 
-At the same time, the shell will get the list of settings for the tenant from the ShellSettingsManager. The default implementation gets the settings from the appropriate subfolder of `App_Data` but alternative implementations can get those from different places. For example, we have an Azure implementation that is using blob storage instead because `App_Data` is not reliably writable in that environment.
+shell一旦创建，将会从ExtensionManager中获取可用扩展列表（即模块和主题）。其默认实现是通过扫描模块和主题目录来获取扩展内容。
 
-The shell then gets the CompositionStrategy object and uses it to prepare the IoC container from the list of available extensions for the current host and from the settings for the current tenant. The result of this is not an IoC container for the shell, it is a ShellBlueprint, which is a list of dependency, controller and record blueprints.
+与此同时，shell还会从ShellSettingManager中获取有关租户的设置列表。其默认实现是在`App_Data`中对应的子文件夹中获取设置，但是我们可以另外实现来从其它不同的位置获取。例如，我们有一个Azure实现，它用来存储blob数据，因为在那种情况下，`App_Data`可写是不安全的。
 
-The list of ShellSettings (that are per tenant) and the ShellBluePrint are then thrown into ShellContainerFactory.CreateContainer to get an ILifetimeScope, which is basically enabling the IoC container to be scoped at the tenant level so that modules can get injected dependencies that are scoped for the current tenant without having to do anything specific.
+之后，shell会获取组策略对象，并使用它依据当前主机服务的可用扩展列表和当前租户的设置来准备IoC容器。在此获得的结果并不是一个shell的IoC容器，它是一个ShellBlueprint —— 依赖、控制器和记录蓝图的一个列表。
 
-## Dependency Injection
+至此，ShellSetting（每个租户）的列表和ShellBluePrint将会放入ShellContainerFactory。利用CreateContainer来获取一个ILifetimeScope —— 基本上可以在租户级别范围使用IoC容器，这样模块可以在不需要处理具体事宜的情况下，获取当前租户的作用域中注入的依赖。
+
+## 依赖注入
 
 The standard way of creating injectable dependencies in Orchard is to create an interface that derives from IDependency or one of its derived interfaces and then to implement that interface. On the consuming side, you can take a parameter of the interface type in your constructor. The application framework will discover all dependencies and will take care of instantiating and injecting instances as needed.
 

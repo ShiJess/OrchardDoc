@@ -21,6 +21,8 @@
 [114]: http://docs.orchardproject.net/en/latest/Upload/screenshots/livewriter13.png
 
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Blogging with LiveWriter][001]
 
 尽管Orchard在控制面板中内置了博文编辑功能，但很多人更喜欢使用客户端来写作文章，例如使用[Open Live Writer][002]。客户端使用XML-RPC接口远程发布文章，同时提供额外的功能，如保存离线草稿（例如：在飞机上写作你的博文，稍后再同步到你的网站）。

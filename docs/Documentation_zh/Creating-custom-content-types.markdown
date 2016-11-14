@@ -29,6 +29,8 @@
 [120]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/ContentTypes_addeventlocation.png
 [121]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/ContentTypes_searchresults.png
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Creating Custom Content Types][001]
 
 

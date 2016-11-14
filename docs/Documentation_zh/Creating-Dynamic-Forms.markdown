@@ -28,6 +28,8 @@
 [121]: http://docs.orchardproject.net/en/latest/Upload/dynamic-forms/exporting-form-submissions.png "Exporting Form Submissions"
 
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Create Dynamic Forms][001]  
 > 译文链接：[Orchard网站管理——创建动态表单][002]
 

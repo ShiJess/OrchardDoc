@@ -26,6 +26,8 @@
 [111]: http://docs.orchardproject.net/en/latest/Upload/screenshots/add_localization_part_MyEvent.png
 
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Creating Global-Ready Applications][001]  
 > 本文主要内容为本地化配置，同时介绍了如何为社区本地化项目提供贡献。
 

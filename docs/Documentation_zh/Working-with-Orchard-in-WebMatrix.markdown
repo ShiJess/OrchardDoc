@@ -28,6 +28,8 @@
 [115]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/webmatrix_publish_preview_675.png
 [116]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/webmatrix_remote_view_675.png
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Working with Orchard in WebMatrix][001]
 
 [WebMatrix][002]——微软一站式Web开发工具，包括网站的创建、编辑以及发布——*不过现在微软更推荐VS code* 。WebMatrix中自带了内置Web服务器(IIS Express), 同时还内置了一个简化的编辑器——可以直接编辑及自定义应用，如Orchard。如果你使用Web Platform Installer安装Orchard，你需要选择将其安装到WebMatrix而非IIS——*在你决定使用WebMatrix管理网站的情况下*。

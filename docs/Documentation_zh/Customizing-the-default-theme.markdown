@@ -13,6 +13,8 @@
 [104]: http://docs.orchardproject.net/en/latest/Upload/screenshots/NewTheme_thumbnail.png
 [105]: http://docs.orchardproject.net/en/latest/Upload/screenshots/themes_available.PNG
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Customizing Themes][001]
 
 Orchard中的默认主题叫 *The Theme Machine* 。它被设计为多功能的，可以从它来进行定制和开发主题。 

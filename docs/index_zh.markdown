@@ -1,5 +1,6 @@
 <!--链接集合-->
 [originhost]: http://docs.orchardproject.net/
+[index]: http://www.shisujie.com/blog/OrchardIndex
 [000]: http://www.shisujie.com
 [001]: http://www.shisujie.com/blog/Installing-Orchard
 [002]: http://www.shisujie.com/blog/Manually-installing-Orchard-zip-file
@@ -48,7 +49,7 @@
 
 # Orchard官方教程（译）索引
 
-> 链接标注 **原文** 则表示未译，其他带有**中文标题**的表示译文内容
+> 链接标注 **原文** 则表示未译，其他带有**中文标题**的表示译文内容。
 
 ## 入门 ##
 

@@ -18,6 +18,8 @@
 [109]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/searchwidgetfrontend.PNG
 
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Search and Indexing][001]
 
 Orchard支持在网站中索引和搜索内容项。索引功能需要启用**Indexing**功能，同时还要一个具体的索引实现功能（例如：Lucene-based是默认内置在Orchard中的）。除了**Indexing**之外，**Search**功能支持通过索引（关键字或Lucene查询语法）来查询内容项，并将匹配的内容列表项返回到前台显示。

@@ -8,6 +8,8 @@
 [102]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/help_commands_initial.png
 [103]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/setup_cmd.png
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Using the Command-Line Interface][001]
 
 Orchard提供命令行接口——用于执行处理许多控制面板中可用的功能（某些不是）。命令行工具叫**orchard.exe**，位于网站根目录下的bin文件夹下。要运行命令行工具，首先要在网站根目录（例如：Orchard.Web）下打开命令提示符窗口。打开方式为：在资源管理器中打开到对应文件夹，按住shift键，同时鼠标右键，然后选择**在此处打开命令窗口**。最后，在当前命令窗口中输入`bin\orchard.exe`。脊注意：你需要在网站根目录下运行orchard命令行工具。

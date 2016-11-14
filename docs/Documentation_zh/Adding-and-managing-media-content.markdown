@@ -17,6 +17,8 @@
 [108]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/upload_zip_media_3_675.png
 
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Adding and Managing Media Content][001]  
 > *注：此文内容相对较老，实际操作指导性不强，仅适合做研究*
 

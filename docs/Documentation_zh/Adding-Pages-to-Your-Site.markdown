@@ -11,6 +11,8 @@
 [105]: http://docs.orchardproject.net/en/latest/Upload/screenshots/EditorControls.png
 [106]: http://docs.orchardproject.net/en/latest/Upload/screenshots/save_publish_buttons.png
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Adding Pages to Your Site][001]
 
 *注：内容为官方文档翻译，本人遇到的page中间是布局，而非官网的body——但此内容可以在内容定义里自行修改（本文不做介绍）*

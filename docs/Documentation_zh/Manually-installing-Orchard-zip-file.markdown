@@ -25,6 +25,8 @@
 [115]: https://github.com/OrchardCMS/OrchardDoc/blob/master/docs/Attachments/Manually-installing-Orchard-zip-file/VSOpenSolution.png?raw=true
 
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Manually Installing Orchard][001]
 
 *文章内容基于Orchard 1.8版本*

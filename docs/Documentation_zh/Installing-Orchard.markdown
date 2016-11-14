@@ -21,6 +21,8 @@
 [107]: http://docs.orchardproject.net/en/latest/Upload/screenshots/get_started_recipe.png
 [108]: http://docs.orchardproject.net/en/latest/Attachments/Installing-Orchard/first_frontend.png
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Installing Orchard][001]
 
 *文章内容基于Orchard 1.8版本*

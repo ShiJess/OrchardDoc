@@ -11,6 +11,8 @@
 [105]: http://docs.orchardproject.net/en/latest/Upload/screenshots_675/pagepublishlater.PNG
 
 
+[index]: http://www.shisujie.com/blog/OrchardIndex
+> [返回目录索引][index]  
 > 原文链接：[Publishing Drafts][001]
 
 Orchard支持将页面保存为草稿或将其发布到网站。当你发布一个页面时，你可以选择立即发布或者指定某一个时间点发布。页面的保存和发布选项在 **新Page** 页面的最底端。
