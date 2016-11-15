@@ -80,22 +80,21 @@ shell一旦创建，将会从ExtensionManager中获取可用扩展列表（即�
 
 ## 依赖注入
 
-The standard way of creating injectable dependencies in Orchard is to create an interface that derives from IDependency or one of its derived interfaces and then to implement that interface. On the consuming side, you can take a parameter of the interface type in your constructor. The application framework will discover all dependencies and will take care of instantiating and injecting instances as needed.
+在Orchard中，标准的创建注入依赖的方式是：先创建一个派生自IDependency（或者是它的派生接口）的接口，然后再实现这个接口。而在使用时，可以在你的构造函数中使用接口类型的参数。Orchard应用框架会发现所有依赖项，然后依据需要进行实例化和注入实例。
 
-There are three different possible scopes for dependencies, and choosing one is done by deriving from the right interface:
+Orchard中为注入提供了三个可行的范围，从中选择正确的接口派生即可：
 
-- Request: a dependency instance is created for each new HTTP request and is destroyed once the request has been processed. Use this by deriving your interface from IDependency. The object should be reasonably cheap to create.
-- Object: a new instance is created every single time an object takes a dependency on the interface. Instances are never shared. Use this by deriving from ITransientDependency. The objects must be extremely cheap to create.
-- Shell: only one instance is created per shell/tenant. Use this by deriving from ISingletonDependency. Only use this for objects that must maintain a common state for the lifetime of the shell.
+- 请求——Request: 为每个新的http请求创建的依赖实例，且一旦请求完成，实例就会销毁。通过继承接口IDependency来使用。此对象应当相对低代价的创建。
+- 对象——Object: 每次对象通过接口获取依赖时，都会创建一个新的实例。且实例从不共享。通过继承接口ITransientDependency来使用。此对象必须很低代价的创建。
+- Shell: 每个shell/租户只创建一个实例。它利用ISingletonDependency接口派生。只有需要在shell生存期中必须保持一个共同状态的对象使用此创建。
 
-### Replacing Existing Dependencies
+### 替换现有依赖
 
-It is possible to replace existing dependencies by decorating your class with the OrchardSuppressDependency attribute, that takes the fully-qualified type name to replace as an argument.
+可以通过使用OrchardSuppressDependency特性装饰类来实现替换现有依赖。它会将完全限定类型名称替换为一个参数。
 
-### Ordering Dependencies
+### 依赖关系排序
 
-Some dependencies are not unique but rather are parts of a list. For example, handlers are all active at the same time. In some cases you will want to modify the order in which such dependencies get consumed. This can be done by modifying the manifest for the module, using the Priority property of the feature. Here is an example of this:
-
+一些依赖项并不唯一，而是列表的一部分。例如，handlers是同时处于活动状态。在某些情况下，你将会需要修改这些依赖的使用顺序。这可以通过修改模块清单来实现 —— 使用功能中优先级（Priority）属性。下面为示例代码：
     
     Features:
         Orchard.Widgets.PageLayerHinting:
@@ -109,13 +108,13 @@ Some dependencies are not unique but rather are parts of a list. For example, ha
 
 ## ASP.NET MVC
 
-Orchard is built on ASP.NET MVC but in order to add things like theming and tenant isolation, it needs to introduce an additional layer of indirection that will present on the ASP.NET MVC side the concepts that it expects and that will on the Orchard side split things on the level of Orchard concepts.
+Orchard是基于ASP.NET MVC建立的，但是为了添加事物，如主题与租户分离，它需要引入一个额外的层，这样，在设想中ASP.NET MVC端将按预期进行控制显示呈现，而在Orchard概念层中的Orchard端拆分事物。
 
-For example, when a specific view is requested, our LayoutAwareViewEngine kicks in. Strictly speaking, it's not a new view engine as it is not concerned with actual rendering, but it contains the logic to find the right view depending on the current theme and then it delegates the rendering work to actual view engines.
+例如，当请求一个特定视图时，我们的LayoutAwareViewEngine将会启动。严格来讲，它并不是一个新的视图引擎，因为它不关心实际的渲染，但是，它包含依据当前主题查找到正确视图的逻辑处理，然后他会将渲染的工作交给实际的视图引擎。
 
-Similarly, we have route providers, model binders and controller factories whose work is to act as a single entry point for ASP.NET MVC and to dispatch the calls to the properly scoped objects underneath.
+同样，我们还有路由提供程序、模型绑定器和控制器工厂，它们的工作是作为ASP.NET MVC的单一入口点，并将调用分配到下面合理范围的对象。
 
-In the case of routes, we can have n providers of routes (typically coming from modules) and one route publisher that will be what talks to ASP.NET MVC. The same thing goes for model binders and controller factories.
+就以路由为例，我们会有n个路由提供程序（通常来自模块）和一个与ASP.NET MVC交互的路由发布程序。模型绑定器和控制器工厂也是一样的。
 
 ## Content Type System
 
