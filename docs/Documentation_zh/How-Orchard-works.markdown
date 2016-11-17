@@ -116,41 +116,41 @@ Orchard是基于ASP.NET MVC建立的，但是为了添加事物，如主题与�
 
 就以路由为例，我们会有n个路由提供程序（通常来自模块）和一个与ASP.NET MVC交互的路由发布程序。模型绑定器和控制器工厂也是一样的。
 
-## Content Type System
+## 内容类型系统
 
-Contents in Orchard are managed under an actual type system that is in some ways richer and more dynamic than the underlying .NET type system, in order to provide the flexibility that is necessary in a Web CMS: types must be composed on the fly at runtime and reflect the concerns of content management.
+在Orchard中，内容由一个真实的类型系统管理，此类型系统相对与.net类型系统在某些方面要更加丰富且更加动态。为了在Web CMS中提供更灵活的处理，类型必须在运行的时候组合，并反应出内容管理的关注点。
 
-### Types, Parts, and Fields
+### 类型、部件和字段
 
-Orchard can handle arbitrary content types, including some that are dynamically created by the site administrator in a code-free manner. Those content types are aggregations of content parts that each deal with a particular concern. The reason for that is that many concerns span more than one content type.
+Orchard可以处理任意的内容类型，包括那些由网站管理员以无代码方式动态创建的类型。这些内容类型是内容部件的整合，其中每个部件都要处理特定的问题。其原因是许多问题会跨越多个内容类型。
 
-For example, a blog post, a product and a video clip might all have a routable address, comments and tags. For that reason, the routable address, comments and tags are each treated in Orchard as a separate content part. This way, the comment management module can be developed only once and apply to arbitrary content types, including those that the author of the commenting module did not know about.
+例如，一篇博文，一个产品展示，和一个视频剪辑可能都含有一个路由地址，以及评论和标签内容。因此，在Orchard中路由地址、评论和标签是作为单独的内容部件来处理。这样，评论管理模块就可以只开发以此，并可以应用到任意的内容类型上，包括评论模块开发者不了解的那些类型。
 
-Parts themselves can have properties and content fields. Content fields are also reusable in the same way that parts are: a specific field type will be typically used by several part and content types. The difference between parts and fields resides in the scale at which they operate and in their semantics.
+部件本身可以含有属性和内容字段。内容字段可以和部件一样重复使用：一个特定的字段类型可以用于多个部件和内容类型。部件和字段的不同之处在于他们操作的范围和语意区别。
 
-Fields are a finer grain than parts. For example, a field type might describe a phone number or a coordinate, whereas a part would typically describe a whole concern such as commenting or tagging.
+字段相对于部件要更加细粒度。例如，字段类型可以描述一个电话号码或一个坐标，然而，一个部件通常用于描述一个完整的问题，如评论或标记。
 
-But the important difference here is semantics: you want to write a part if it implements an "is a" relationship, and you would write a field if it implements a "has a" relationship.
+但是它们最重要的不同是他们的含义：如果要实现**是一个**的关系，你需要写一个部件；如果要实现**有一个**的关系，你就需要写一个字段。
 
-For example, a shirt **is a** product and it **has a** SKU and a price. You wouldn't say that a shirt has a product or that a shirt is a price or a SKU.
+例如，一件衬衫**是一个**产品，它**有**库存和价格。你不可能说一件衬衫有一个产品或者它是一个价格或库存。
 
-From that you know that the Shirt content type will be made of a Product part, and that the Product part will be made from a Money field named "price" and a String field named SKU.
+从上面可以知道，衬衫它是一个内容类型，它将是由产品部件组成，然后产品部件由一个名为价格的money字段和一个名为SKU的字符串字段组成。
 
-Another difference is that you have only one part of a given type per content type, which makes sense in light of the "is a" relationship, whereas a part can have any number of fields of a given type. Another way of saying that is that fields on a part are a dictionary of strings to values of the field's type, whereas the content type is a list of part types (without names).
+另一个不同点是，在每一个内容类型中，你只能有一个给定类型的部件 —— 这样**是一个**关系才有意义，而一个部件可以含有给定类型的任意数量的字段。还有另一种说法是，部件上的字段是字段类型从字符串到值的字典，而内容类型是部件类型（不含名称）的列表。
 
-This gives another way of choosing between part and field: if you think people would want more than one instance of your object per content type, it needs to be a field.
+这提供了另一种选择部件和字段的方式：如果你认为在每个内容类型中，你的对象需要多个实例，它就需要是一个字段。
 
-### Anatomy of a Content Type
+### 内容类型解析
 
-A content type, as we've seen, is built from content parts. Content parts, code-wise, are typically associated with:
+正如我们看到的，一个内容类型是从内容部件构建出来的。在代码方面，内容部件通常与以下内容有关：
 
-- a Record, which is a POCO representation of the part's data
-- a model class that is the actual part and that derives from `ContentPart<T>` where T is the record type
-- a repository. The repository does not need to be implemented by the module author as Orchard will be able to just use a generic one.
-- handlers. Handlers implement IContentHandler and are a set of event handlers such as OnCreated or OnSaved. Basically, they hook onto the content item's lifecycle to perform a number of tasks. They can also participate in the actual composition of the content items from their constructors. There is a Filters collection on the base ContentHandler that enable the handler to add common behavior to the content type.  
-For example, Orchard provides a StorageFilter that makes it very easy to declare how persistence of a content part should be handled: just do `Filters.Add(StorageFilter.For(myPartRepository));` and Orchard will take care of persisting to the database the data from myPartRepository.  
-Another example of a filter is the ActivatingFilter that is in charge of doing the actual welding of parts onto a type: calling `Filters.Add(new ActivatingFilter<BodyAspect>(BlogPostDriver.ContentType.Name));` adds the body content part to blog posts.
-- drivers. Drivers are friendlier, more specialized handlers (and as a consequence less flexible) and are associated with a specific content part type (they derive from `ContentPartDriver<T>` where T is a content part type). Handlers on the other hand do not have to be specific to a content part type. Drivers can be seen as controllers for a specific part. They typically build shapes to be rendered by the theme engine.
+- 一条记录 —— 部件数据的POCO对象表示。
+- 一个模型类 —— 实际的部件，由`ContentPart<T>`派生出来，其中T是记录类型。
+- 存储库 —— 存储库不需要模块作者实现，因为 Orchard会提供通用的使用方式。
+- 事件处理程序 —— 处理程序实现IContentHandler接口，它是一系列的事件处理程序，如OnCreated或OnSaved。基本上，它们与内容项的生命周期挂钩，它们用于处理多个任务。他们还可以通过内容项的构造函数参与到它们的实际构成。在ContentHandler基类中有一个筛选器集合，可以允许处理程序添加通用处理到内容类型中。  
+例如，Orchard提供了一个StorageFilter —— 用它可以方便的声明一个内容类型的持久化怎么处理：只需要使用`Filters.Add(StorageFilter.For(myPartRepository));`，这样Orchard就会将来自myPartRepository的数据持久化存储到数据库。  
+另一个示例是ActivatingFilter —— 负责将一个类型关联到实际的部件上：调用`Filters.Add(new ActivatingFilter<BodyAspect>(BlogPostDriver.ContentType.Name));`，这样就是向博文添加正文内容部分。
+- 驱动 —— 驱动程序是一种更友好、更特殊的处理程序（因此相对不灵活），并且它与特定的内容部件相关联（他们派生自`ContentPartDriver<T>`，T为内容部件类型）。另外，处理程序不一定要指定一个内容部件类型。驱动程序可以看作一个特殊部件的控制器。他们通常需要通过主题引擎来构建显示的形态。
 
 ## Content Manager
 All contents are accessed in Orchard through the ContentManager object, which is how it becomes possible to use contents of a type you don't know in advance.
