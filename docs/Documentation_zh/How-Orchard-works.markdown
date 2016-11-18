@@ -152,10 +152,11 @@ Orchard可以处理任意的内容类型，包括那些由网站管理员以无�
 另一个示例是ActivatingFilter —— 负责将一个类型关联到实际的部件上：调用`Filters.Add(new ActivatingFilter<BodyAspect>(BlogPostDriver.ContentType.Name));`，这样就是向博文添加正文内容部分。
 - 驱动 —— 驱动程序是一种更友好、更特殊的处理程序（因此相对不灵活），并且它与特定的内容部件相关联（他们派生自`ContentPartDriver<T>`，T为内容部件类型）。另外，处理程序不一定要指定一个内容部件类型。驱动程序可以看作一个特殊部件的控制器。他们通常需要通过主题引擎来构建显示的形态。
 
-## Content Manager
-All contents are accessed in Orchard through the ContentManager object, which is how it becomes possible to use contents of a type you don't know in advance.
+## 内容管理器
 
-ContentManager has methods to query the content store, to version contents and to manage their publication status.
+在Orchard中，所有的内容都通过内容管理器对象访问 —— 这使得在你不知道内容类型的情况下，仍然可以使用内容。
+
+内容管理器含有查询内容存储、版本内容和管理发布状态的方法。
 
 ## Transactions
 
