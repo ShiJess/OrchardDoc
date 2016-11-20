@@ -10,6 +10,7 @@
 [007]: http://www.castleproject.org/projects/dynamicproxy/
 [008]: https://zh.wikipedia.org/wiki/多租户技术
 
+> 最近更新：2016-11-20
 
 [index]: http://www.shisujie.com/blog/OrchardIndex
 > [返回目录索引][index]  
@@ -158,24 +159,24 @@ Orchard可以处理任意的内容类型，包括那些由网站管理员以无�
 
 内容管理器含有查询内容存储、版本内容和管理发布状态的方法。
 
-## Transactions
+## 事务
 
-Orchard is automatically creating a transaction for each HTTP request. That means that all operations that happen during a request are part of an "ambient" transaction. If code during that request aborts that transaction, all data operations will be rolled back. If the transaction is never explicitly cancelled on the other hand, all operations get committed at the end of the request without an explicit commit.
+Orchard自动为每个HTTP请求创建一个事务。这意味着在请求期间发生的所有操作都是“ambient”事务的一部分。如果代码在请求期间中止事务，则那个事务里面所有的数据操作都将回滚。如果事务从未显示地取消，所有的操作会在请求结束时提交，而不需要显示提交。
 
 
-## Request Lifecycle
+## 请求的生命周期
 
-In this section, we'll take the example of a request for a specific blog post.
+在本节中，我们将以特定的博文请求作为示例。
 
-When a request comes in for a specific blog post, the application first looks at the available routes that have been contributed by the various modules and finds the blog module's matching route. The route can then resolve the request to the blog post controller's item action, which will look up the post from the content manager. The action then gets a Page Object Model (POM) from the content manager (by calling BuildDisplay) based on the main object for that request, the post that was retrieved from the content manager.
+当针对特定博文发出请求时，应用首先会查看由各个模块贡献的可用路由，然后找到与博客模块匹配的路由。之后，路由会解析请求到博文控制器项的action —— action会从内容管理器中查找博文。然后action会基于请求主对象来从内容管理器（调用BuildDisplay）中获取页面对象Model（POM） —— 即在内容管理器中检索博文。
 
-A blog post has its own controller, but that is not the case for all content types. For example, dynamic content types will be served by the more generic ItemController from the Core Routable part. The Display action of the ItemController does almost the same thing that the blog post controller was doing: it gets the content item from the content manager by slug and then builds the POM from the results.
+博文有自己的控制器，但是并支持所有内容类型。例如，动态内容类型将通过Core Routable部分中更通用的ItemController来处理。ItemController的Display操作与博文控制器中的操作几乎一样：它通过slug从内容管理器中获取内容项，然后使用结果生成POM。
 
-The layout view engine will then resolve the right view depending on the current theme and using the model's type together with Orchard conventions on view naming.
+然后，布局视图引擎将依据当前的主题和使用的模型类型以及Orchard中约定的视图名称来解析出正确的视图。
 
-Within the view, more dynamic shape creation can happen, such as zone definitions.
+在视图中，可以进行更多的动态形状创建，如区域定义。
 
-The actual rendering is done by the theme engine that is going to find the right template or shape method to render each of the shapes it encounters in the POM, in order of appearance and recursively.
+实际渲染将有主题引擎完成，主题引擎会寻找正确的模板或形状方法，并按照出现的顺序递归地来渲染它在POM中遇到的每个形状。
 
 ## Widgets
 
