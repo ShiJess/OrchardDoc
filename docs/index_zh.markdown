@@ -140,8 +140,8 @@
 #### 模块开发相关
 
 * **Orchard扩展——_Extending Orchard_**
-    * [初步理解Orchard——*First Steps into Orchard*][043]
-    * [Orchard的工作原理——*How Orchard Works*][044]
+    * [**初步理解Orchard**——*First Steps into Orchard*][043]
+    * [**Orchard的工作原理**——*How Orchard Works*][044]
     * [Command-Line Code Generation](Documentation/Command-line-scaffolding)
     * [Getting Started with Modules Course](Documentation/Getting-Started-with-Modules)
         * [Part 1 - Build a Static Widget](Documentation/Getting-Started-with-Modules-Part-1)

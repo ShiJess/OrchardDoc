@@ -178,19 +178,19 @@ Orchard自动为每个HTTP请求创建一个事务。这意味着在请求期间
 
 实际渲染将有主题引擎完成，主题引擎会寻找正确的模板或形状方法，并按照出现的顺序递归地来渲染它在POM中遇到的每个形状。
 
-## Widgets
+## 部件
 
-Widgets are content types that have the Widget content part and the widget stereotype. Like any other content types, they are composed of parts and fields. That means that they can be edited using the same edition and rendering logic as other content types. They also share the same building blocks, which means that any existing content part can potentially be reused as part of a widget almost for free.
+部件是含有部件内容元件和部件模型的内容类型。和其他内容类型一样，它们由元件和字段组成。这意味着他们可以使用与其他内容类型相同的版本和渲染逻辑来进行编辑。它们也 可以共享相同的构件块，这意味着任何已存在的内容元件都有可能自由的组合到部件中。
 
-Widgets are added to pages through widget layers. Layers are sets of widgets. They have a name, a rule that determines what pages of the site they should appear on, and a list of widgets and associated zone placement and ordering, and settings.
+部件通过部件层添加到页面。层是部件集合。它具有一个名称和一个规则（用于控制哪些网站页面需要显示），以及一个部件列表和相关的区域布局、排序和设置。
 
-The rules attached to each of the layers are expressed with IronRuby expressions. Those expressions can use any of the IRuleProvider implementations in the application. Orchard ships with two out of the box implementations: url and authenticated.
+附加到每个层的规则是用IronRuby表达式表示。这些表达式可以使用应用中的任何IruleProvider实现。Orchard中提供了两个内置实现：url和authenticated。
 
-## Site Settings
+## 网站设置
 
-A site in Orchard is a content item, which makes it possible for modules to weld additional parts. This is how modules can contribute site settings.
+在Orchard中，站点是一个内容项，这样使得它可以为模块链接其他附加元件。这也是模块如何可以进行网站设置。
 
-Site settings are per tenant.
+网站设置针对每个租户。
 
 ## Event Bus
 
