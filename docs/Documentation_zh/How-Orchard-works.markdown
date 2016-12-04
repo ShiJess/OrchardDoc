@@ -10,7 +10,7 @@
 [007]: http://www.castleproject.org/projects/dynamicproxy/
 [008]: https://zh.wikipedia.org/wiki/多租户技术
 
-> 最近更新：2016-11-20
+> 最近更新：2016-12-04
 
 [index]: http://www.shisujie.com/blog/OrchardIndex
 > [返回目录索引][index]  
@@ -192,25 +192,25 @@ Orchard自动为每个HTTP请求创建一个事务。这意味着在请求期间
 
 网站设置针对每个租户。
 
-## Event Bus
+## 事件总线
 
-Orchard and its modules expose extensibility points by creating interfaces for dependencies, implementations of which can then get injected.
+Orchard以及其模块是通过创建依赖关系的接口来公开扩展端口，这样之后，就可以通过注入方式实现他们。
 
-Plugging into an extensibility point is done either by implementing its interface, or by implementing an interface that has the same name and the same methods. In other words, Orchard does not require strictly strongly typed interface correspondence, which enables plug-ins to extend an extensibility point without taking a dependency on the assembly where it's defined.
+向扩展端口插入功能，是通过实现接口，或实现具有相同名称及方法的接口来完成的。也就是说，Orchard在向扩展端口添加插件时，不需要严格的强类型接口对应，其不依赖于其定义的组件。
 
-This is just one implementation of the Orchard event bus. When an extensibility point calls into injected implementations, a message gets published on the event bus. One of the objects listening to the event bus dispatches the messages to the methods in classes that derive from an interface appropriately named.
+这仅仅是Orchard事件总线的一个实现。当扩展端口 调用注入的实现时，一个消息就会发布到事件总线上。监听事件总线的对象之一会将消息分配给对应的类的方法（从相应命名接口派生的类）。
 
-## Commands
+## 命令
 
-Many actions on an Orchard site can be performed from the command line as well as from the admin UI. These commands are exposed by the methods of classes implementing ICommandHandler that are decorated with a CommandName attribute.
+在Orchard网站中，许多操作都可以使用命令以及控制面板UI来处理。这些命令通过在ICommandHandler的派生类中的方法上添加CommandName特性装饰来将其公开。
 
-The Orchard command line tool discovers available commands at runtime by simulating the web site environment and inspecting the assemblies using reflection. The environment in which the commands run is as close as possible to the actual running site.
+Orchard命令行工具通过在运行期间，模拟网站环境并通过反射检查程序集来发现可用 的命令。这样命令运行的环境会尽可能的接近实际运行的站点。
 
-## Search and Indexing
+## 搜索与索引
 
-Search and indexing are implemented using Lucene by default, although that default implementation could be replaced with another indexing engine.
+搜索和索引在默认情况下是使用Lucene实现，但其可以使用另一个索引引擎来替代默认实现。
 
-## Caching
+## 缓存
 
 The cache in Orchard relies on the ASP.NET cache, but we expose a helper API that can be used through a dependency of type ICache, by calling the Get method. Get takes a key and a function that can be used to generate the cache entry's value if the cache doesn't already contains the requested entry.
 
