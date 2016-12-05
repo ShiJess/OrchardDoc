@@ -212,24 +212,23 @@ Orchard命令行工具通过在运行期间，模拟网站环境并通过反射�
 
 ## 缓存
 
-The cache in Orchard relies on the ASP.NET cache, but we expose a helper API that can be used through a dependency of type ICache, by calling the Get method. Get takes a key and a function that can be used to generate the cache entry's value if the cache doesn't already contains the requested entry.
+Orchard中的缓存依赖于ASP.NET的缓存，但是我们通过调用Get方法公布了一个辅助API —— 通过ICache类型的依赖关系来使用。如果缓存还没有包含请求的记录，则可以通过Get获取一个键和一个函数来生成缓存记录值。
 
-The main advantage of using the Orchard API for caching is that it works per tenant transparently.
+使用Orchard API处理缓存的主要优点是，它对于每个租户的工作是透明的。
 
-## File Systems
+## 文件系统
 
-The file system in Orchard is abstracted so that storage can be directed to the physical file system or to an alternate storage such as Azure blob storage, depending on the environment. The Media module is an example of a module that uses that abstracted file system.
+Orchard中的文件系统是抽象化的，因此存储处理可以指向一个物理文件系统，或者一个备用的存储（如Azure blob存储）—— 取决于具体环境。媒体模块是使用该抽象文件系统的模块实现示例。
 
-## Users and Roles
+## 用户及角色
 
-Users in Orchard are content items (albeit not routable ones) which makes it easy for a profile module for example to extend them with additional fields.
-Roles are a content part that gets welded onto users.
+在Orchard中，用户是作为内容项处理（虽然不是可路由的），这让配置模块变得容易（如为其扩展附加字段）。角色则是用户的一个内容部件。
 
-## Permissions
+## 权限
 
-Every module can expose a set of permissions as well as how those permissions should be granted by default to Orchard's default roles.
+每个模块都可以公布一组权限，以及如何将这些权限默认分配给Orchard的默认角色。
 
-## Tasks
+## 任务
 
 Modules can schedule tasks by calling CreateTask on a dependency of type IScheduledTaskManager. The task can then be executed by implementing IScheduledTaskHandler. The Process method can examine the task type name and decide whether to handle it.
 
