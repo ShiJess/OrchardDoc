@@ -9,6 +9,7 @@
 [006]: https://en.wikipedia.org/wiki/Inversion_of_control
 [007]: http://www.castleproject.org/projects/dynamicproxy/
 [008]: https://zh.wikipedia.org/wiki/多租户技术
+[009]: http://docs.orchardproject.net/en/latest/Documentation/Using-the-localization-helpers/
 
 > 最近更新：2016-12-04
 
@@ -230,23 +231,23 @@ Orchard中的文件系统是抽象化的，因此存储处理可以指向一个�
 
 ## 任务
 
-Modules can schedule tasks by calling CreateTask on a dependency of type IScheduledTaskManager. The task can then be executed by implementing IScheduledTaskHandler. The Process method can examine the task type name and decide whether to handle it.
+模块可以通过在IScheduledTaskManager类型的依赖中调用CreateTask来计划安排任务。然后通过实现IScheduledTaskHandler来执行任务。Process方法可以检查任务类型名称，以及决定是否执行处理它。
 
-Tasks are being run on a separate thread that comes from the ASP.NET thread pool.
+任务是运行一个单独的线程上，此线程来自ASP.NET线程池。
 
-## Notifications
+## 通知
 
-Modules can surface messages to the admin UI by getting a dependency on INotifier and calling one of its methods. Multiple notifications can be created as part of any request.
+模块可以通过获取INotifier的一个依赖并调用里面的一个方法来向控制面板界面显示消息。可以通过创建多个通知来作为请求的一部分。
 
-## Localization
+## 本地化
 
-Localization of the application and its modules is done by wrapping string resources in a call to the T method: `@T("This string can be localized")`. See [Using the localization helpers](Using-the-localization-helpers) for more details and guidelines. Orchard's resource manager can load localized resource strings from PO files located in specific places in the application.
+应用及其模块的本地化是通过在调用T方法时传入字符串资源来实现的：`@T("This string can be localized")`。关于更多详细信息和准则，参阅[原文：Using the Localization Providers][009]。Orchard资源管理器会从应用中的特定位置的PO文件来加载本地化 资源字符串。
 
-Content item localization is done through a different mechanism: localized versions of a content item are physically separate content items that are linked together by a special part.
+内容项的本地化是通过不同的机制来完成的：内容项的本地化版本是通过一个特定的部分链接到内容项 —— 它是物理上分离的内容项。
 
-The current culture to use is determined by the culture manager. The default implementation returns the culture that has been configured in site settings, but an alternate implementation could get it from the user profile or from the browser's settings.
+当前的语言文化环境是由文化管理器来决定的。默认实现是返回在网站设置中配置的语言，但是还有代替实现是可以从用户配置文件或浏览器设置中获取。
 
-## Logging
+## 日志记录
 
 Logging is done through a dependency of type ILogger. Different implementations can send the log entries to various storage types. Orchard comes with an implementation that uses [Castle.Core.Logging](https://github.com/castleproject/Windsor/blob/master/docs/logging-facility.md) for logging.
 
