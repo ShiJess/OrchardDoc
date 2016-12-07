@@ -10,6 +10,7 @@
 [007]: http://www.castleproject.org/projects/dynamicproxy/
 [008]: https://zh.wikipedia.org/wiki/多租户技术
 [009]: http://docs.orchardproject.net/en/latest/Documentation/Using-the-localization-helpers/
+[010]: https://github.com/castleproject/Windsor/blob/master/docs/logging-facility.md
 
 > 最近更新：2016-12-04
 
@@ -249,26 +250,27 @@ Orchard中的文件系统是抽象化的，因此存储处理可以指向一个�
 
 ## 日志记录
 
-Logging is done through a dependency of type ILogger. Different implementations can send the log entries to various storage types. Orchard comes with an implementation that uses [Castle.Core.Logging](https://github.com/castleproject/Windsor/blob/master/docs/logging-facility.md) for logging.
+日志记录是 通过ILogger类型的依赖来完成的。不同的实现可以将日志记录发送到各种不同的存储介质类型中。Orchard利用实现Castle.Core.Logging来实现日志记录。关于更多Castle.Core.Logging内容，详见：[Castle.Core.Logging][010]。
 
-# Orchard Core
+# Orchard核心
 
-The Orchard.Core assembly contains a set of modules that are necessary for Orchard to run. Other modules can safely take dependencies on these modules that will always be available.
+Orchard.Core程序集包含一组Orchard运行所必需的模块。其他模块将依赖于这些模块，且这些模块将始终可用以此保证稳妥地运行。
 
-Examples of core modules are feeds, navigation or routable.
+核心模块的示例是：订阅，导航或可路由。
 
-# Modules
-The default distribution of Orchard comes with a number of built-in modules such as blogging or pages, but third party modules are being built as well.
+# 模块
 
-A module is just an ASP.NET MVC area with a manifest.txt file that is extending Orchard.
+Orchard的默认分发包含一些内置模块，如博客或页面，当然，第三方的模块也在构建中。
 
-A module typically contains event handlers, content types and their default rendering templates as well as some admin UI.
+模块只是一个带有用于扩展Orchard的manifest.txt文件的ASP.NET MVC区域。
 
-Modules can be dynamically compiled from source code every time a change is made to their csproj file or to one of the files that the csproj file references. This enables a "notepad" style of development that does no require explicit compilation by the developer or even the use of an IDE such as Visual Studio.
+一个模块通常要包含事件处理程序，内容类型和他们的默认呈现模板以及相应的管理界面。
 
-Modules must be placed in the Modules folder (Orchard.Web/Modules/MyModule) and the folder name *must* match the name of the compiled DLL produced by the project.  So, if you have a custom module project called My.Custom.Module.csproj and it compiles to My.Custom.Module.dll, then the module root folder must be named My.Custom.Module. [~/Modules/My.Custom.Module/]
+模块可以在每次对csproj文件或csproj文件引用的文件进行改变时，从源代码进行动态编译。这可以让我们使用“记事本”风格进行开发，即不需要开发人员显示编译，甚至 是，不需要使用IDE，如Visual Studio。
 
-# Themes
+模块必须放置在Modules文件夹中（Orchard.Web/Modules/MyModule），并且文件夹的名称必须与项目编译生成的dll名称匹配。因此，如果你有一个名为My.Custom.Models.csproj的自定义模块的项目，并且它编译后名为My.Custom.Module.dll，那么模块的顶级文件夹 必须命名为My.Custom.Module，即`~/Modules/My.Custom.Module/`。
+
+# 主题
 
 It is a basic design principle in Orchard that all the HTML that it produces can be replaced from themes, including markup produced by modules. Conventions define what files must go where in the theme's file hierarchy.
 
