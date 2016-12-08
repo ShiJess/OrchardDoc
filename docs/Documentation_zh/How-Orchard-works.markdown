@@ -12,7 +12,6 @@
 [009]: http://docs.orchardproject.net/en/latest/Documentation/Using-the-localization-helpers/
 [010]: https://github.com/castleproject/Windsor/blob/master/docs/logging-facility.md
 
-> 最近更新：2016-12-04
 
 [index]: http://www.shisujie.com/blog/OrchardIndex
 > [返回目录索引][index]  
@@ -272,23 +271,22 @@ Orchard的默认分发包含一些内置模块，如博客或页面，当然，�
 
 # 主题
 
-It is a basic design principle in Orchard that all the HTML that it produces can be replaced from themes, including markup produced by modules. Conventions define what files must go where in the theme's file hierarchy.
+主题是Orchard中的一个基本的设计原则，Orchard中生成的所有html都可以从主题中替换，包括模块生成的标记。其中规则定义了在主题文件的层次结构中，文件必须放在哪里。
 
-The whole rendering mechanism in Orchard is based on shapes. The theme engine's job is to find the current theme and given that theme determine what the best way to render each shape is. Each shape can have a default rendering that may be defined by a module as a template in the views folder or as a shape method in code. That default rendering may be overridden by the current theme. The theme does that by having its own version of a template for that shape or its own shape method for that shape.
+Orchard中整个渲染机制是基于形状。主题引擎的工作是找到当前主题，然后确定主题渲染每个形状的最好方式是什么。每个形状可能有一个由模块定义的默认渲染。它可能是在视图文件夹中以模板方式定义，也可能是代码中以形状方法定义。默认渲染可能会被当前主题覆盖。主题会通过形状来创建自己的模板或者形状方法。
 
-Themes can have a parent, which enables child themes to be specializations or adaptations of a parent theme. Orchard comes with a base theme called the Theme Machine that has been designed to make it easy to use as a parent theme.
+主题可以有一个父级，它可以让子主题以父主题为基础进行自己的特殊化处理或者修改处理。Orchard默认带有一个名为Theme Machine的基本主题，其可以用于作为父主题来使用。
 
-Themes can contain code in much the same way modules do: they can have their own csproj file and benefit from dynamic compilation. This enables themes to define shape methods, but also to expose admin UI for any settings they may have.
+主题可以包含于模块完全相同的代码：他们可以有自己的csproj文件，并可以利用动态编译。这让主题可以定义形状方法，还可以向管理界面公开任何可能有的设置。
 
-The selection of the current theme is done by classes implementing IThemeSelector, which return a theme name and a priority for any request. This allows many selectors to contribute to the choice of the theme. Orchard comes with four implementations of IThemeSelector:
+当前主题的选择是由实现IThemeSelector的类来处理的，这些类可以返回主题的名称以及任何请求的优先级。这允许多个选择器来出来里主题的选择。Orchard默认带有四个IThemeSelector实现：
 
-- SiteThemeSelector selects the theme that is currently configured for the tenant or site with a low priority.
-- AdminThemeSelector takes over and returns the admin theme with a high priority whenever the current URL is an admin URL.
-- PreviewThemeSelector overrides the site's current theme with the theme being previewed if the current user is the one that initiated the theme preview.
-- SafeModeThemeSelector is the only selector available when the application is in "safe mode", which happens typically during setup. It has a very low priority.
+- SiteThemeSelector —— 选择当前为最低优先级的租户或站点配置的主题。
+- AdminThemeSelector —— 当前URL是一个管理URL时，此实现接管并返回具有高优先级的管理主题。
+- PreviewThemeSelector —— 当前用户启动主题预览，则此主题覆盖网站当前主题和正在预览的主题。
+- SafeModeThemeSelector —— 当应用处于**安全模式**时，此主题是唯一可用的选择器，这通常 在安装过程中发生。它的优先级非常低。
 
-An example of a theme selector might be one that promotes a mobile theme when the user agent is recognized to belong to a mobile device.
-
+主题选择器的示例可以是在当前useragent被识别为移动设备时，就选用一个移动主题。
 
 ***
 译：[奇葩史][000]
