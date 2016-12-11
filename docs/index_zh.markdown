@@ -46,6 +46,7 @@
 [042]: http://docs.orchardproject.net/en/latest/Documentation/Frequently-asked-questions/
 [043]: http://www.shisujie.com/blog/First-steps-into-Orchard
 [044]: http://www.shisujie.com/blog/How-Orchard-works
+[045]: http://www.shisujie.com/blog/Using-the-localization-helpers
 
 # Orchard官方教程（译）索引
 
@@ -142,6 +143,7 @@
 * **Orchard扩展——_Extending Orchard_**
     * [**初步理解Orchard**——*First Steps into Orchard*][043]
     * [**Orchard的工作原理**——*How Orchard Works*][044]
+    * [**本地化提供程序使用**——*Using the Localization Providers*][045]
     * [Command-Line Code Generation](Documentation/Command-line-scaffolding)
     * [Getting Started with Modules Course](Documentation/Getting-Started-with-Modules)
         * [Part 1 - Build a Static Widget](Documentation/Getting-Started-with-Modules-Part-1)
