@@ -53,37 +53,32 @@ Orchard利用一个简单的API来支持本地化，其将输入的默认语言�
 它的最终结果将是： 
 
 "I'm writing a note here: <b>huge</b> success."
+  
+> 注意：实现IHtmlString类型的任何对象都将注入未编码，因为我们假设它已经正确编码。这就是使用`new HtmlString(noteText)`的功能。  
+> 上述编码未编码比较拗口，未找到合适翻译，其实际表述就是：未编码 —— 将按原样显示，编码 —— 某些内容会进行转换。
 
-> 注意：在此，我们假设使用IHtmlString实现类的任何对象都已正确编码，所以它将被注入未编码内容。这是你在写`new HtmlString(noteText)`所使用的技巧。？？？
-
-For example, if you do the following:
+例如，如果你进行如下处理：
     
     @T("{0}: We do what we must because {1}",
         Html.ItemDisplayLink(apertureScienceContentItem),
         justification)
 
+这样，操作链接将不会编码，并且按预期显示，而justification字符串会编码。
 
-Then the action link will not be encoded and will work as expected, while the justification string will be encoded.
+还有需要注意的是，格式字符串本身是被认为安全的，因为它是由模块作者提供，所以下面内容将如预期的一样显示：
 
-
-It should also be noted that the format string itself is considered safe as it is provided by the module author, so the following will work as expected:
-
-    
     @T("It's <em>hard</em> to overstate my <strong>{0}</strong>",
         emotion)
 
+如果emotion中包含"&lt;satisfaction&gt;", 则其结果字符串为"It's <b>hard</b> to overstate my <b>&lt;satisfaction&gt;</b>".
 
-If emotion contains "&lt;satisfaction&gt;", the resulting string will be "It's <b>hard</b> to overstate my <b>&lt;satisfaction&gt;</b>".
+### 注入没字符串值
 
-### Injecting non-string values
-
-Basic value types are not html encoded before formatting, and the current culture will be used to format them:
-
+基础值类型在格式化之前不是html编码的，并且当前的语言文化将会用于对它们进行格式化：
     
     @T("when {0} qty {1:#,##0.00} unit price {2:C}", _clock.UtcNow, 5.782, 87)
 
-
-### Pluralization
+### 多元化
 
 Pluralization of resource strings (such as `{0} comment` or `{0} comments`) can be tricky as the rules for pluralization or even how many strings you need for all cases wildly varies across languages. While Orchard does not yet implement all possible cases, the API is ready to support them in the future.
 
