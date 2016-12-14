@@ -78,27 +78,26 @@ Orchard利用一个简单的API来支持本地化，其将输入的默认语言�
     
     @T("when {0} qty {1:#,##0.00} unit price {2:C}", _clock.UtcNow, 5.782, 87)
 
-### 多元化
+### 复数
 
-Pluralization of resource strings (such as `{0} comment` or `{0} comments`) can be tricky as the rules for pluralization or even how many strings you need for all cases wildly varies across languages. While Orchard does not yet implement all possible cases, the API is ready to support them in the future.
+资源字符串（如 `{0} comment` 或 `{0} comments`）的复数是比较棘手的，因为不同语言之间存在差异，其中包含复数的规则或者你需要多少字符串来应对所有情况。尽管Orchard尚未实现所有可能的情况，但其API已经准备在以后支持它们。
 
-If a string needs to be pluralized, provide two strings for the default language and put the pluralization parameter first:
+如果一个字符串需要进行复数处理，请为默认语言提供两个字符串，并将复数参数作为第一个格式化参数：
 
-    
     @T.Plural("1 Comment", "{0} Comments", commentCount)
     @T.Plural("Deleted 1 item of type {1}", "Deleted {0} items of type {1}",
         deleteCount, contentType)
 
+在单数字符串中使用`1`，以此可以为翻译者提供更好的上下文（如上所示）。
 
-Use `1` literally in the singular string to provide better context to translators (like in the example above).
+复数参数必须是整数。
 
-The pluralization parameter must be an integer.
+不要再视图中使用自定义逻辑来决定字符串的内容，因为不同的文化下，其视图逻辑可能会不同。
 
-Do not use custom logic in the views to decide between strings, as that would put in the view logic that may vary by culture.
+## 通过代码使用T()
 
-## Using T() via the code
+### 使用依赖 注入设置
 
-### Setting it up with dependency injection
 You can use the `T()` localization helper within your code such as drivers, services and other classes.
 
 By adding a public property to your class Orchard will detect it and use the property injection features of Autofac to configure your method with current `Localizer`.
