@@ -98,27 +98,28 @@ Orchard利用一个简单的API来支持本地化，其将输入的默认语言�
 
 ### 使用依赖 注入设置
 
-You can use the `T()` localization helper within your code such as drivers, services and other classes.
+你可以在代码（如驱动类、服务类以及其他类）中使用`T()`本地化辅助方法。
 
-By adding a public property to your class Orchard will detect it and use the property injection features of Autofac to configure your method with current `Localizer`.
+通过向你的类中添加公共属性，Orchard可以检测它，并利用Autofac的属性注入功能来使用当前的Localizer配置你的方法。
 
-The process is as follows:
+其过程如下：
 
-  1. Add a public property to your class:
+1. 向你的类中添加公共属性：
   
-         public Localizer T { get; set; }
+        public Localizer T { get; set; }
 
-     You can technically use any variable name for the `T` property but the convention is to use `T`.
-      
-  1. In your constructor, assign a default value to the `T` property:
+技术上，你可以使用任何变量名，并不一定要用`T`作为属性名，但在此约定使用`T`。
+
+2. 在构造函数中，为T属性赋一个默认值：
   
-         protected YourClassName() {
-           T = NullLocalizer.Instance;
-         }
+        protected YourClassName() {
+        T = NullLocalizer.Instance;
+        }
             
-      This is to prevent the localizer from ending up without a default localizer before Autofac has configured it for you. 
-      
-### Inherit IDependency classes from Component to get T() automatically
+这是为了防止在Autofac配置好localizer之前，由于没有默认localizer而导致应用结束。
+
+### 利用继承自接口IDependency的Component类来自动获取T()
+
 Orchard provides an abstract class, `Component` which is defined in the `Orchard.Framework` project within `IDependency.cs`:
 
     public abstract class Component : IDependency {
